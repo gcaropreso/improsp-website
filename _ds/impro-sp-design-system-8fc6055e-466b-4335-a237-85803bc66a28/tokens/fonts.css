@@ -1,0 +1,162 @@
+/* ============================================================
+   IMPRO.SP — @font-face declarations
+   6 house voices actually in use. (Americaine-Condensed.otf is a
+   deprecated v2 leftover — file kept in assets/fonts/ for archival
+   reasons only, NOT declared here. Do not use it.)
+   ============================================================ */
+
+@font-face {
+  font-family: 'Affigere';
+  src: url('../assets/fonts/Affigere-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Coolvetica';
+  src: url('../assets/fonts/Coolvetica-Rg.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Coolvetica';
+  src: url('../assets/fonts/Coolvetica-Rg-It.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Coolvetica Condensed';
+  src: url('../assets/fonts/Coolvetica-Rg-Cond.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Coolvetica Cram';
+  src: url('../assets/fonts/Coolvetica-Rg-Cram.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Coolvetica Heavy Compressed';
+  src: url('../assets/fonts/Coolvetica-Hv-Comp.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Libre Caslon Text';
+  src: url('https://fonts.gstatic.com/s/librecaslontext/v4/DdTh798AAK6P0SVAoqgvOwYd5NDVEd-C5w.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Libre Caslon Text';
+  src: url('https://fonts.gstatic.com/s/librecaslontext/v4/DdT578AAK6P0SVAoqgvOwYRZq9x8y6gm9GK7A.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DuchaCompleta';
+  src: url('../assets/fonts/DuchaCompleta-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TeAmoJessica';
+  src: url('../assets/fonts/TeAmoJessica-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* HitMePunk — 14 hand-lettered alternate sets from the same "zine/ransom" pack.
+   01 is the house default (most legible); 02–14 are alternate letterform
+   moods for variety across a series — swap the family below when composing. */
+@font-face {
+  font-family: 'HitMePunk';
+  src: url('../assets/fonts/HitMePunk-01.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'HitMePunk-02';
+  src: url('../assets/fonts/HitMePunk-02.ttf') format('truetype');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'HitMePunk-03';
+  src: url('../assets/fonts/HitMePunk-03.ttf') format('truetype');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'HitMePunk-04';
+  src: url('../assets/fonts/HitMePunk-04.ttf') format('truetype');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'HitMePunk-05';
+  src: url('../assets/fonts/HitMePunk-05.ttf') format('truetype');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'HitMePunk-06';
+  src: url('../assets/fonts/HitMePunk-06.ttf') format('truetype');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'HitMePunk-07';
+  src: url('../assets/fonts/HitMePunk-07.ttf') format('truetype');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'HitMePunk-08';
+  src: url('../assets/fonts/HitMePunk-08.ttf') format('truetype');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'HitMePunk-09';
+  src: url('../assets/fonts/HitMePunk-09.ttf') format('truetype');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'HitMePunk-10';
+  src: url('../assets/fonts/HitMePunk-10.ttf') format('truetype');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'HitMePunk-11';
+  src: url('../assets/fonts/HitMePunk-11.ttf') format('truetype');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'HitMePunk-12';
+  src: url('../assets/fonts/HitMePunk-12.ttf') format('truetype');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'HitMePunk-13';
+  src: url('../assets/fonts/HitMePunk-13.ttf') format('truetype');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'HitMePunk-14';
+  src: url('../assets/fonts/HitMePunk-14.ttf') format('truetype');
+  font-display: swap;
+}

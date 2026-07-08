@@ -1,0 +1,49 @@
+/* ============================================================
+   IMPRO.SP — Type tokens
+   5 house voices + 1 punk reserve. Base 18px. Brutal jumps —
+   nothing between "the shout" and running body text.
+   ============================================================ */
+:root {
+  /* ---- base font stacks (the 6 voices) ---- */
+  /* Voice 1 — THE SHOUT: titles, posters, covers */
+  --t-cartaz: 'Affigere', 'Bricolage Grotesque', Impact, sans-serif; /* @kind font */
+  /* Voice 2 — organizer: body + SERVICE info */
+  --t-corpo:  'Coolvetica', 'Rubik', Helvetica, Arial, sans-serif; /* @kind font */
+  /* Voice 3 — the thinker: quotes, manifestos, editorial */
+  --t-serifa: 'Libre Caslon Text', 'Libre Caslon Display', Georgia, serif; /* @kind font */
+  /* Voice 4 — the hand: annotations, arrows, corrections */
+  --t-mao:    'DuchaCompleta', Caveat, cursive; /* @kind font */
+  /* Voice 5 — the tag: manifestos, keywords, wall */
+  --t-pixo:   'TeAmoJessica', 'Rubik Spray Paint', 'Affigere', sans-serif; /* @kind font */
+  /* Reserve — zine/ransom: aggressive one-offs only */
+  --t-punk:   'HitMePunk', 'Affigere', sans-serif; /* @kind font */
+
+  /* ---- base sizes: brutal scale, base 18px ---- */
+  --fs-body:        18px; /* @kind other */
+  --fs-body-print:  12pt; /* @kind other */
+  --fs-service:     15px; /* @kind other */
+  --fs-caption:     13.5px; /* @kind other */
+  --fs-quote:       clamp(19px, 2.1vw, 26px); /* @kind other */
+  --fs-lede:        clamp(22px, 2.7vw, 32px); /* @kind other */
+  --fs-title:       clamp(48px, 9vw, 96px); /* @kind other */
+  --fs-shout:       clamp(56px, 12vw, 164px); /* @kind other */
+  --fs-tag:         clamp(52px, 10vw, 128px); /* @kind other */
+
+  /* ---- line-height ---- */
+  --lh-shout: 0.85; /* @kind other */
+  --lh-title: 0.9; /* @kind other */
+  --lh-body:  1.5; /* @kind other */
+  --lh-quote: 1.4; /* @kind other */
+  --lh-lede:  1.38; /* @kind other */
+
+  /* ---- semantic aliases ---- */
+  --text-display:  var(--t-cartaz); /* @kind font */
+  --text-body:     var(--t-corpo); /* @kind font */
+  --text-editorial: var(--t-serifa); /* @kind font */
+  --text-hand:     var(--t-mao); /* @kind font */
+  --text-tag:      var(--t-pixo); /* @kind font */
+  --text-punk:     var(--t-punk); /* @kind font */
+
+  --tracking-service: 3px; /* @kind spacing */
+  --tracking-label:   2px; /* @kind spacing */
+}

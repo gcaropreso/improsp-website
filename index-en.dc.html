@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <title>IMPRO.SP — School of theatrical improvisation · São Paulo</title>
+  <meta name="description" content="IMPRO.SP — contemporary school of theatrical improvisation in downtown São Paulo, Brazil. Contemporary theater, live composition, risk.">
+  <link rel="stylesheet" href="_ds/impro-sp-design-system-8fc6055e-466b-4335-a237-85803bc66a28/tokens/fonts.css">
+  <link rel="stylesheet" href="_ds/impro-sp-design-system-8fc6055e-466b-4335-a237-85803bc66a28/tokens/colors.css">
+  <link rel="stylesheet" href="_ds/impro-sp-design-system-8fc6055e-466b-4335-a237-85803bc66a28/tokens/typography.css">
+  <link rel="stylesheet" href="_ds/impro-sp-design-system-8fc6055e-466b-4335-a237-85803bc66a28/tokens/spacing.css">
+  <link rel="stylesheet" href="_ds/impro-sp-design-system-8fc6055e-466b-4335-a237-85803bc66a28/base.css">
+  <link rel="stylesheet" href="_ds/impro-sp-design-system-8fc6055e-466b-4335-a237-85803bc66a28/styles.css">
+  <script src="_ds/impro-sp-design-system-8fc6055e-466b-4335-a237-85803bc66a28/_ds_bundle.js"></script>
+  <style>
+    a{color:var(--vermelho)}
+    a:hover{color:var(--vermelho-c)}
+    @keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  </style>
+</helmet>
+
+<div class="grain-overlay"></div>
+
+<dc-import name="Nav" active="home" lang="en" hint-size="100%,84px"></dc-import>
+
+<header class="secao secao--tinta" data-screen-label="Home EN — Hero" style="padding-bottom:0">
+  <div class="pagina" style="padding-bottom:clamp(48px,7vw,96px)">
+    <span class="carimbo" style="margin-bottom:28px">School of theatrical improvisation</span>
+    <h1 style="font-family:var(--text-display);font-size:clamp(58px,11.5vw,176px);line-height:.85;text-transform:uppercase;margin:18px 0 0;max-width:12ch">Nobody knows the <span class="linha-vermelha">next line.</span></h1>
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-top:clamp(32px,5vw,56px)">
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <span class="servico" style="font-size:15px;color:var(--papel)">Contemporary theater <span style="color:var(--vermelho)">✕</span> Live composition <span style="color:var(--vermelho)">✕</span> Risk</span>
+        <p style="font-size:clamp(17px,1.8vw,21px);max-width:44ch">An improvisation school in downtown São Paulo, Brazil.</p>
+      </div>
+      <span class="mao" style="font-size:clamp(19px,2.2vw,26px);transform:rotate(-2deg)">neither do we. that's why we rehearse.</span>
+    </div>
+  </div>
+</header>
+
+<section class="secao" data-screen-label="Home EN — What moves us">
+  <div class="pagina">
+    <div class="cap">
+      <span class="cap__num">01</span>
+      <h2 class="cap__nome">What moves us</h2>
+      <span class="cap__nota">this is theater</span>
+    </div>
+    <div class="grade g2" style="align-items:start">
+      <div style="display:flex;flex-direction:column;gap:28px">
+        <p class="lede">We make <em>theater</em>.</p>
+        <div style="display:flex;flex-direction:column;gap:12px;font-weight:700;font-size:17px">
+          <span><span style="color:var(--vermelho)">✕</span> Not group dynamics, icebreakers or stand-up.</span>
+          <span><span style="color:var(--vermelho)">✕</span> We don't sell corporate tools, productivity or personal development.</span>
+        </div>
+      </div>
+      <div class="prosa">
+        <p>IMPRO.SP is an independent cultural institution. A school, an artistic collective and a research laboratory. We train artists, develop stage language and build community.</p>
+        <p>Here, improvisation means <span class="linha-vermelha">instant dramaturgy</span>, listening, presence and collective creation. A stage with no safety net.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<sc-if value="{{ emCartaz }}" hint-placeholder-val="{{ true }}">
+<section class="secao secao--cimento" data-screen-label="Home EN — Now playing">
+  <div class="pagina">
+    <div class="cap">
+      <span class="cap__num">02</span>
+      <h2 class="cap__nome">Now playing</h2>
+      <span class="cap__nota">july 2026 · barra funda</span>
+    </div>
+    <div class="grade g2" style="align-items:start;gap:clamp(32px,5vw,64px)">
+      <div style="position:relative;max-width:520px;justify-self:center">
+        <img src="images/flyer-figura.jpg" alt="Flyer for the FIGURA workshop with Gabriel Caropreso — Porão Cultural" style="width:100%;display:block;border:3px solid var(--tinta);box-shadow:6px 6px 0 rgba(0,0,0,.18);transform:rotate(-1deg)">
+        <div class="fita" style="width:110px;height:34px;top:-14px;left:-28px;transform:rotate(-8deg)"></div>
+        <div class="fita" style="width:110px;height:34px;top:-12px;right:-30px;left:auto;transform:rotate(6deg)"></div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:24px">
+        <span class="carimbo">Enrollment open</span>
+        <div>
+          <h3 style="font-family:var(--text-display);font-size:clamp(44px,6vw,80px);line-height:.85;text-transform:uppercase">Figura Workshop</h3>
+          <p class="servico" style="font-size:15px;margin-top:12px">Visual stimuli for improvisation · with Gabriel Caropreso</p>
+        </div>
+        <div class="prosa">
+          <p>We use images — photos, paintings and comics — to build scenes and create stage imagery. The format comes from the show <em>#sigodevolta</em> and has been to Thessaloniki, Barcelona and Cologne. This is its first time in São Paulo.</p>
+          <p>On the last day, the group takes the stage for an open showcase. The starting point: photos from the social media of whoever is in the audience.</p>
+        </div>
+        <div class="cartao cartao--tinta" style="box-shadow:6px 6px 0 rgba(0,0,0,.18)">
+          <div style="display:flex;flex-direction:column;gap:11px">
+            <span style="font-size:15px"><strong class="servico" style="color:var(--vermelho);font-size:13.5px;margin-right:8px">When</strong> Saturdays — July 11, 18 &amp; 25, 2026</span>
+            <span style="font-size:15px"><strong class="servico" style="color:var(--vermelho);font-size:13.5px;margin-right:8px">Time</strong> 3pm to 6pm</span>
+            <span style="font-size:15px"><strong class="servico" style="color:var(--vermelho);font-size:13.5px;margin-right:8px">Where</strong> Porão Cultural (annex to Porão da Cerveja) — Barra Funda, São Paulo, Brazil</span>
+            <span style="font-size:15px"><strong class="servico" style="color:var(--vermelho);font-size:13.5px;margin-right:8px">Price</strong> R$ 180</span>
+            <span style="font-size:15px"><strong class="servico" style="color:var(--vermelho);font-size:13.5px;margin-right:8px">Capacity</strong> Group of 20 students</span>
+            <span style="font-size:15px"><strong class="servico" style="color:var(--vermelho);font-size:13.5px;margin-right:8px">Sign up</strong> WhatsApp +55 11 99114-9592</span>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;gap:18px;flex-wrap:wrap">
+          <a href="{{ waFigura }}" target="_blank" rel="noopener" style="text-decoration:none">
+            <x-import component-from-global-scope="IMPROSPDesignSystem_8fc605.Button" size="lg" hint-size="260px,58px">Sign me up</x-import>
+          </a>
+          <a href="cursos-en.dc.html" style="font-weight:700;font-size:15px;color:var(--tinta)" style-hover="color:var(--vermelho)">full program →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</sc-if>
+
+<section class="secao secao--tinta" data-screen-label="Home EN — Ecosystem" style="padding-bottom:0">
+  <div class="pagina">
+    <div class="cap">
+      <span class="cap__num">03</span>
+      <h2 class="cap__nome">The ecosystem</h2>
+      <span class="cap__nota">rehearsal continues on the sidewalk</span>
+    </div>
+    <div class="grade g2" style="align-items:center;gap:clamp(32px,5vw,64px)">
+      <div style="display:flex;flex-direction:column;gap:24px">
+        <p class="lede">Beyond the <em>rehearsal room</em>.</p>
+        <div class="prosa">
+          <p>IMPRO.SP has no fixed venue because it occupies the city. Our work happens in theaters and partner spaces.</p>
+          <p>But the school is also a meeting point. Our calendar mixes shows, concerts, jams, parties, samba circles and bar gatherings.</p>
+          <p><strong>We create scenes by building community.</strong></p>
+        </div>
+      </div>
+      <div style="position:relative;max-width:560px;width:100%;justify-self:center">
+        <img src="images/home/comunidade.jpg" alt="Black and white photo of a jam or community gathering" style="width:100%;display:block;border:3px solid var(--papel);filter:grayscale(1) contrast(1.15)">
+        <div class="fita" style="width:120px;height:34px;top:-14px;left:50%;margin-left:-60px;transform:rotate(-4deg)"></div>
+        <span class="mao" style="position:absolute;bottom:-34px;right:0;font-size:20px;transform:rotate(-2deg)">school jam ↑</span>
+      </div>
+    </div>
+  </div>
+  <div style="margin-top:clamp(48px,7vw,88px)">{{ ticker }}</div>
+</section>
+
+<dc-import name="Footer" lang="en" hint-size="100%,320px"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;emCartaz&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Program&quot;},&quot;whatsapp&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;5511991149592&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Contact&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const numero = (this.props.whatsapp ?? '5511991149592').replace(/\D/g, '');
+    const msg = 'Hello! I would like to sign up for the FIGURA workshop in July.';
+    const words = ['listening', 'risk', 'scene', 'presence', 'jam', 'instant dramaturgy', 'samba', 'rehearsal', 'sidewalk', 'community'];
+    const line = words.join('  ✕  ') + '  ✕  ';
+    const strip = React.createElement(
+      'div',
+      { style: { overflow: 'hidden', whiteSpace: 'nowrap', background: 'var(--vermelho-c)', color: '#fff', borderTop: '3px solid var(--papel)' } },
+      React.createElement(
+        'div',
+        { style: { display: 'inline-block', whiteSpace: 'nowrap', animation: 'ticker 30s linear infinite', fontFamily: 'var(--text-display)', textTransform: 'uppercase', fontSize: 'clamp(22px,2.6vw,32px)', lineHeight: 1, padding: '14px 0' } },
+        React.createElement('span', null, line),
+        React.createElement('span', null, line)
+      )
+    );
+    return {
+      emCartaz: this.props.emCartaz ?? true,
+      waFigura: 'https://wa.me/' + numero + '?text=' + encodeURIComponent(msg),
+      ticker: strip,
+    };
+  }
+}
+</script>
+</body>
+</html>

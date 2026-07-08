@@ -1,0 +1,33 @@
+/* ============================================================
+   IMPRO.SP — Spacing, border & surface tokens
+   Grid exists to be broken with intent; these are the base
+   units before the breaking happens.
+   ============================================================ */
+:root {
+  --sp-1: 6px;
+  --sp-2: 10px;
+  --sp-3: 14px;
+  --sp-4: 22px;
+  --sp-5: 32px;
+  --sp-6: 44px;
+  --sp-7: 64px;
+  --sp-8: 96px;
+  --sp-9: 140px;
+
+  --section-pad: clamp(64px, 10vw, 140px);
+  --page-max-width: 1180px;
+  --page-pad: 5vw;
+
+  /* ---- borders: always solid, always heavy, never rounded ---- */
+  --border-width-sm: 2px;
+  --border-width-md: 3px;
+  --border-width-lg: 5px;
+  --radius: 0px; /* @kind radius */
+
+  /* ---- hard offset "shadow" (no blur, ever) ---- */
+  --shadow-hard: 6px 6px 0 rgba(0,0,0,.18); /* @kind shadow */
+
+  /* tape / fita element */
+  --fita-w: 110px;
+  --fita-h: 32px;
+}

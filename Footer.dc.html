@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="_ds/impro-sp-design-system-8fc6055e-466b-4335-a237-85803bc66a28/tokens/fonts.css">
+  <link rel="stylesheet" href="_ds/impro-sp-design-system-8fc6055e-466b-4335-a237-85803bc66a28/tokens/colors.css">
+  <link rel="stylesheet" href="_ds/impro-sp-design-system-8fc6055e-466b-4335-a237-85803bc66a28/tokens/typography.css">
+  <link rel="stylesheet" href="_ds/impro-sp-design-system-8fc6055e-466b-4335-a237-85803bc66a28/tokens/spacing.css">
+  <link rel="stylesheet" href="_ds/impro-sp-design-system-8fc6055e-466b-4335-a237-85803bc66a28/base.css">
+  <style>
+    a{color:var(--vermelho)}
+    a:hover{color:var(--vermelho-c)}
+  </style>
+</helmet>
+<footer style="background:var(--tinta);color:var(--papel);border-top:5px solid var(--vermelho);padding:56px 24px 32px">
+  <sc-if value="{{ isPt }}" hint-placeholder-val="{{ true }}">
+    <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:40px;align-items:start">
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <img src="images/logo/impro-sp-logo.png" alt="IMPRO.SP" style="width:150px;display:block">
+        <p style="font-size:15px;line-height:1.5;max-width:32ch">Escola contemporânea de improvisação teatral. São Paulo.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <span style="font-family:var(--text-body);font-weight:700;text-transform:uppercase;letter-spacing:var(--tracking-service);font-size:13.5px;color:var(--vermelho)">Contato</span>
+        <a href="https://wa.me/5511991149592" target="_blank" rel="noopener" style="color:var(--papel);text-decoration:none;font-weight:700;font-size:16px" style-hover="color:var(--vermelho)">WhatsApp +55 11 99114-9592</a>
+        <a href="https://instagram.com/impro.sp" target="_blank" rel="noopener" style="color:var(--papel);text-decoration:none;font-weight:700;font-size:16px" style-hover="color:var(--vermelho)">Instagram @impro.sp</a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <span style="font-family:var(--text-body);font-weight:700;text-transform:uppercase;letter-spacing:var(--tracking-service);font-size:13.5px;color:var(--vermelho)">Onde</span>
+        <p style="font-size:15px;line-height:1.5;max-width:34ch">Sede nômade. A escola ocupa a cidade — o endereço da vez está sempre na agenda.</p>
+        <span class="mao" style="font-size:21px;transform:rotate(-2deg);display:inline-block">ninguém sabe a próxima fala →</span>
+      </div>
+    </div>
+    <div style="max-width:1200px;margin:44px auto 0;border-top:1px solid var(--grafite);padding-top:16px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--concreto);font-weight:700;text-transform:uppercase;letter-spacing:2px">
+      <span>www.improsp.com.br</span>
+      <span>IMPRO.SP — 2026</span>
+    </div>
+  </sc-if>
+  <sc-if value="{{ isEn }}" hint-placeholder-val="{{ false }}">
+    <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:40px;align-items:start">
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <img src="images/logo/impro-sp-logo.png" alt="IMPRO.SP" style="width:150px;display:block">
+        <p style="font-size:15px;line-height:1.5;max-width:32ch">Contemporary school of theatrical improvisation. São Paulo, Brazil.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <span style="font-family:var(--text-body);font-weight:700;text-transform:uppercase;letter-spacing:var(--tracking-service);font-size:13.5px;color:var(--vermelho)">Contact</span>
+        <a href="https://wa.me/5511991149592" target="_blank" rel="noopener" style="color:var(--papel);text-decoration:none;font-weight:700;font-size:16px" style-hover="color:var(--vermelho)">WhatsApp +55 11 99114-9592</a>
+        <a href="https://instagram.com/impro.sp" target="_blank" rel="noopener" style="color:var(--papel);text-decoration:none;font-weight:700;font-size:16px" style-hover="color:var(--vermelho)">Instagram @impro.sp</a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <span style="font-family:var(--text-body);font-weight:700;text-transform:uppercase;letter-spacing:var(--tracking-service);font-size:13.5px;color:var(--vermelho)">Where</span>
+        <p style="font-size:15px;line-height:1.5;max-width:34ch">Nomadic school. We occupy the city — the current address is always on the calendar.</p>
+        <span class="mao" style="font-size:21px;transform:rotate(-2deg);display:inline-block">nobody knows the next line →</span>
+      </div>
+    </div>
+    <div style="max-width:1200px;margin:44px auto 0;border-top:1px solid var(--grafite);padding-top:16px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--concreto);font-weight:700;text-transform:uppercase;letter-spacing:2px">
+      <span>www.improsp.com.br</span>
+      <span>IMPRO.SP — 2026</span>
+    </div>
+  </sc-if>
+</footer>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:&quot;100%&quot;,&quot;height&quot;:&quot;320px&quot;},&quot;lang&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;pt&quot;,&quot;en&quot;],&quot;default&quot;:&quot;pt&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const pt = (this.props.lang ?? 'pt') === 'pt';
+    return { isPt: pt, isEn: !pt };
+  }
+}
+</script>
+</body>
+</html>

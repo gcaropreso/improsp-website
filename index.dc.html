@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <title>IMPRO.SP — Escola de improvisação teatral · São Paulo</title>
+  <meta name="description" content="IMPRO.SP — escola contemporânea de improvisação teatral no centro de São Paulo. Teatro contemporâneo, composição ao vivo, risco.">
+  <link rel="stylesheet" href="_ds/impro-sp-design-system-8fc6055e-466b-4335-a237-85803bc66a28/tokens/fonts.css">
+  <link rel="stylesheet" href="_ds/impro-sp-design-system-8fc6055e-466b-4335-a237-85803bc66a28/tokens/colors.css">
+  <link rel="stylesheet" href="_ds/impro-sp-design-system-8fc6055e-466b-4335-a237-85803bc66a28/tokens/typography.css">
+  <link rel="stylesheet" href="_ds/impro-sp-design-system-8fc6055e-466b-4335-a237-85803bc66a28/tokens/spacing.css">
+  <link rel="stylesheet" href="_ds/impro-sp-design-system-8fc6055e-466b-4335-a237-85803bc66a28/base.css">
+  <link rel="stylesheet" href="_ds/impro-sp-design-system-8fc6055e-466b-4335-a237-85803bc66a28/styles.css">
+  <script src="_ds/impro-sp-design-system-8fc6055e-466b-4335-a237-85803bc66a28/_ds_bundle.js"></script>
+  <style>
+    a{color:var(--vermelho)}
+    a:hover{color:var(--vermelho-c)}
+    @keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  </style>
+</helmet>
+
+<div class="grain-overlay"></div>
+
+<dc-import name="Nav" active="home" lang="pt" hint-size="100%,84px"></dc-import>
+
+<header class="secao secao--tinta" data-screen-label="Home — Hero" style="padding-bottom:0">
+  <div class="pagina" style="padding-bottom:clamp(48px,7vw,96px)">
+    <span class="carimbo" style="margin-bottom:28px">Escola de improvisação teatral</span>
+    <h1 style="font-family: var(--text-display); font-size: 66px; line-height: 1; text-transform: uppercase; margin: 18px 0 0; max-width: 13.2ch; letter-spacing: 5.5px; height: 273px; width: 663px; padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px">Ninguém sabe a <span class="linha-vermelha">próxima fala.</span></h1>
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-top:clamp(32px,5vw,56px)">
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <span class="servico" style="font-size:15px;color:var(--papel)">Teatro contemporâneo <span style="color:var(--vermelho)">✕</span> Composição ao vivo <span style="color:var(--vermelho)">✕</span> Risco</span>
+        <p style="font-size:clamp(17px,1.8vw,21px);max-width:44ch">Uma escola de improvisação no centro de São Paulo.</p>
+      </div>
+      <span class="mao" style="font-size:clamp(19px,2.2vw,26px);transform:rotate(-2deg)">a gente também não. por isso ensaia.</span>
+    </div>
+  </div>
+</header>
+
+<section class="secao" data-screen-label="Home — O que nos move">
+  <div class="pagina">
+    <div class="cap">
+      <span class="cap__num">01</span>
+      <h2 class="cap__nome">O que nos move</h2>
+      <span class="cap__nota">isso aqui é teatro</span>
+    </div>
+    <div class="grade g2" style="align-items:start">
+      <div style="display:flex;flex-direction:column;gap:28px">
+        <p class="lede">A gente faz <em>teatro</em>.</p>
+        <div style="display:flex;flex-direction:column;gap:12px;font-weight:700;font-size:17px">
+          <span><span style="color:var(--vermelho)">✕</span> Não é dinâmica de grupo, quebra-gelo ou stand-up.</span>
+          <span><span style="color:var(--vermelho)">✕</span> Não vendemos ferramenta corporativa, produtividade ou desenvolvimento pessoal.</span>
+        </div>
+      </div>
+      <div class="prosa">
+        <p>A IMPRO.SP é uma instituição cultural independente. Escola, coletivo artístico e laboratório de pesquisa. Formamos artistas, desenvolvemos linguagem cênica e criamos comunidade.</p>
+        <p>Aqui, improvisação significa <span class="linha-vermelha">dramaturgia instantânea</span>, escuta, presença e criação coletiva. Palco sem rede de proteção.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<sc-if value="{{ emCartaz }}" hint-placeholder-val="{{ true }}">
+<section class="secao secao--cimento" data-screen-label="Home — Em cartaz">
+  <div class="pagina">
+    <div class="cap">
+      <span class="cap__num">02</span>
+      <h2 class="cap__nome">Em cartaz</h2>
+      <span class="cap__nota">julho de 2026 · barra funda</span>
+    </div>
+    <div class="grade g2" style="align-items:start;gap:clamp(32px,5vw,64px)">
+      <div style="position:relative;max-width:520px;justify-self:center">
+        <img src="images/flyer-figura.jpg" alt="Flyer da oficina-montagem FIGURA, com Gabriel Caropreso — Porão Cultural" style="width:100%;display:block;border:3px solid var(--tinta);box-shadow:6px 6px 0 rgba(0,0,0,.18);transform:rotate(-1deg)">
+        <div class="fita" style="width:110px;height:34px;top:-14px;left:-28px;transform:rotate(-8deg)"></div>
+        <div class="fita" style="width:110px;height:34px;top:-12px;right:-30px;left:auto;transform:rotate(6deg)"></div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:24px">
+        <span class="carimbo">Inscrições abertas</span>
+        <div>
+          <h3 style="font-family:var(--text-display);font-size:clamp(44px,6vw,80px);line-height:.85;text-transform:uppercase">Workshop Figura</h3>
+          <p class="servico" style="font-size:15px;margin-top:12px">Estímulos visuais para a improvisação · com Gabriel Caropreso</p>
+        </div>
+        <div class="prosa">
+          <p>A gente vai usar imagens — fotos, pinturas e quadrinhos — para construir cenas e criar imagens no palco. O formato vem do espetáculo <em>#sigodevolta</em> e já passou por Tessalônica, Barcelona e Colônia. É a primeira vez dele em São Paulo.</p>
+          <p>No último dia, o grupo vai pro palco fazer uma mostra aberta. O ponto de partida vão ser as fotos das redes sociais de quem estiver na plateia.</p>
+        </div>
+        <div class="cartao cartao--tinta" style="box-shadow:6px 6px 0 rgba(0,0,0,.18)">
+          <div style="display:flex;flex-direction:column;gap:11px">
+            <span style="font-size:15px"><strong class="servico" style="color:var(--vermelho);font-size:13.5px;margin-right:8px">Quando</strong> Sábados — 11, 18 e 25 de julho de 2026</span>
+            <span style="font-size:15px"><strong class="servico" style="color:var(--vermelho);font-size:13.5px;margin-right:8px">Horário</strong> Das 15h às 18h</span>
+            <span style="font-size:15px"><strong class="servico" style="color:var(--vermelho);font-size:13.5px;margin-right:8px">Onde</strong> Porão Cultural (anexo ao Porão da Cerveja) — Barra Funda, São Paulo/SP</span>
+            <span style="font-size:15px"><strong class="servico" style="color:var(--vermelho);font-size:13.5px;margin-right:8px">Preço</strong> R$ 180</span>
+            <span style="font-size:15px"><strong class="servico" style="color:var(--vermelho);font-size:13.5px;margin-right:8px">Lotação</strong> Turma de 20 alunos</span>
+            <span style="font-size:15px"><strong class="servico" style="color:var(--vermelho);font-size:13.5px;margin-right:8px">Inscrição</strong> WhatsApp +55 11 99114-9592</span>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;gap:18px;flex-wrap:wrap">
+          <a href="{{ waFigura }}" target="_blank" rel="noopener" style="text-decoration:none">
+            <x-import component-from-global-scope="IMPROSPDesignSystem_8fc605.Button" size="lg" hint-size="260px,58px">Quero me inscrever</x-import>
+          </a>
+          <a href="cursos.dc.html" style="font-weight:700;font-size:15px;color:var(--tinta)" style-hover="color:var(--vermelho)">ver ementa completa →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</sc-if>
+
+<section class="secao secao--tinta" data-screen-label="Home — Ecossistema" style="padding-bottom:0">
+  <div class="pagina">
+    <div class="cap">
+      <span class="cap__num">03</span>
+      <h2 class="cap__nome">O ecossistema</h2>
+      <span class="cap__nota">o ensaio continua na calçada</span>
+    </div>
+    <div class="grade g2" style="align-items:center;gap:clamp(32px,5vw,64px)">
+      <div style="display:flex;flex-direction:column;gap:24px">
+        <p class="lede">Além da <em>sala de ensaio</em>.</p>
+        <div class="prosa">
+          <p>A IMPRO.SP não tem sede fixa porque ocupa a cidade. Nosso trabalho acontece ocupando teatros e espaços parceiros.</p>
+          <p>Mas a escola também é ponto de encontro. Nosso calendário integra espetáculos, shows, jams, festas, rodas de samba e encontros de bar.</p>
+          <p><strong>Criamos cena construindo comunidade.</strong></p>
+        </div>
+      </div>
+      <div style="position:relative;max-width:560px;width:100%;justify-self:center">
+        <img src="images/home/comunidade.jpg" alt="Foto em preto e branco de jam ou encontro da comunidade" style="width:100%;display:block;border:3px solid var(--papel);filter:grayscale(1) contrast(1.15)">
+        <div class="fita" style="width:120px;height:34px;top:-14px;left:50%;margin-left:-60px;transform:rotate(-4deg)"></div>
+        <span class="mao" style="position:absolute;bottom:-34px;right:0;font-size:20px;transform:rotate(-2deg)">jam da escola ↑</span>
+      </div>
+    </div>
+  </div>
+  <div style="margin-top:clamp(48px,7vw,88px)">{{ ticker }}</div>
+</section>
+
+<dc-import name="Footer" lang="pt" hint-size="100%,320px"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;emCartaz&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Programação&quot;},&quot;whatsapp&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;5511991149592&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Contato&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const numero = (this.props.whatsapp ?? '5511991149592').replace(/\D/g, '');
+    const msg = 'Olá, quero me inscrever no Workshop FIGURA de julho.';
+    const palavras = ['escuta', 'risco', 'cena', 'presença', 'jam', 'dramaturgia instantânea', 'samba', 'ensaio', 'calçada', 'comunidade'];
+    const linha = palavras.join('  ✕  ') + '  ✕  ';
+    const faixa = React.createElement(
+      'div',
+      { style: { overflow: 'hidden', whiteSpace: 'nowrap', background: 'var(--vermelho-c)', color: '#fff', borderTop: '3px solid var(--papel)' } },
+      React.createElement(
+        'div',
+        { style: { display: 'inline-block', whiteSpace: 'nowrap', animation: 'ticker 30s linear infinite', fontFamily: 'var(--text-display)', textTransform: 'uppercase', fontSize: 'clamp(22px,2.6vw,32px)', lineHeight: 1, padding: '14px 0' } },
+        React.createElement('span', null, linha),
+        React.createElement('span', null, linha)
+      )
+    );
+    return {
+      emCartaz: this.props.emCartaz ?? true,
+      waFigura: 'https://wa.me/' + numero + '?text=' + encodeURIComponent(msg),
+      ticker: faixa,
+    };
+  }
+}
+</script>
+</body>
+</html>

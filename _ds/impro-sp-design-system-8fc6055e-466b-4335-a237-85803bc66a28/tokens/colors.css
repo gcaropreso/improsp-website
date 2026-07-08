@@ -1,0 +1,42 @@
+/* ============================================================
+   IMPRO.SP — Color tokens
+   Official palette is short and hard: black, white, red, gray.
+   Everything else is a situational accent, never brand color.
+   ============================================================ */
+:root {
+  /* ---- base values: official palette (brand color) ---- */
+  --tinta:       #12100E;  /* ink-black */
+  --papel:       #FFFFFF;  /* paper-white — pure white per brand update */
+  --vermelho:    #FF0000;  /* SP red — screen */
+  --vermelho-q:  #FF183B;  /* warm red — photo/print */
+  --vermelho-c:  #D81E12;  /* poster red — Pantone 485 */
+  --concreto:    #8C8A85;  /* concrete gray */
+  --cimento:     #D8D5CE;  /* light cement gray */
+  --grafite:     #3A3833;  /* dark graphite gray */
+
+  /* ---- base values: situational accents (NOT brand color) ---- */
+  --sup-teal:    #00726B;  /* by SURFACE: color lifted from a real wall (post campaigns) */
+  --proc-navy:   #0E244B;  /* by PROCESS: cross-process / scanner color-shift */
+  --kraft:       #B5915F;  /* material support: kraft paper */
+
+  /* ---- semantic aliases ---- */
+  --color-bg:            var(--papel);
+  --color-bg-inverse:    var(--tinta);
+  --color-fg:            var(--tinta);
+  --color-fg-inverse:    var(--papel);
+  --color-accent:        var(--vermelho);
+  --color-accent-print:  var(--vermelho-c);
+  --color-accent-photo:  var(--vermelho-q);
+  --color-border:        var(--tinta);
+  --color-border-inverse: var(--papel);
+  --color-muted:         var(--concreto);
+  --color-surface-alt:   var(--cimento);
+  --color-surface-dark:  var(--grafite);
+  --color-accent-surface: var(--sup-teal);
+  --color-accent-process: var(--proc-navy);
+
+  /* mix ratio for compositions: 70% neutral / 22% contrast / 8% red */
+  --ratio-neutral: 70%;
+  --ratio-contrast: 22%;
+  --ratio-accent: 8%;
+}

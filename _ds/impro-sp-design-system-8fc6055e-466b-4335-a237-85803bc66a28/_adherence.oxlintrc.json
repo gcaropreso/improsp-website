@@ -1,0 +1,285 @@
+{
+  "plugins": [
+    "react",
+    "import"
+  ],
+  "rules": {
+    "react/forbid-elements": [
+      "warn",
+      {
+        "forbid": []
+      }
+    ],
+    "no-restricted-imports": [
+      "warn",
+      {
+        "patterns": [
+          {
+            "group": [
+              "components/core/**"
+            ],
+            "message": "Import design-system components from 'index.js', not component internals."
+          }
+        ]
+      }
+    ],
+    "no-restricted-syntax": [
+      "warn",
+      {
+        "selector": "Literal[value=/#[0-9a-fA-F]{3,8}\\b/]",
+        "message": "Raw hex color — use a design-system color token via var()."
+      },
+      {
+        "selector": "Literal[value=/\\b\\d+px\\b/]",
+        "message": "Raw px value — use a design-system spacing token via var()."
+      },
+      {
+        "selector": "Literal[value=/font-family\\s*:\\s*(?!['\\\"]?(?:Affigere|Coolvetica|Coolvetica Condensed|Coolvetica Cram|Coolvetica Heavy Compressed|Libre Caslon Text|DuchaCompleta|TeAmoJessica|HitMePunk|HitMePunk-02|HitMePunk-03|HitMePunk-04|HitMePunk-05|HitMePunk-06|HitMePunk-07|HitMePunk-08|HitMePunk-09|HitMePunk-10|HitMePunk-11|HitMePunk-12|HitMePunk-13|HitMePunk-14))/i]",
+        "message": "Font not provided by the design system. Available: Affigere, Coolvetica, Coolvetica Condensed, Coolvetica Cram, Coolvetica Heavy Compressed, Libre Caslon Text, DuchaCompleta, TeAmoJessica, HitMePunk, HitMePunk-02, HitMePunk-03, HitMePunk-04, HitMePunk-05, HitMePunk-06, HitMePunk-07, HitMePunk-08, HitMePunk-09, HitMePunk-10, HitMePunk-11, HitMePunk-12, HitMePunk-13, HitMePunk-14."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Badge'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|color|rotate|key|ref|className|style|children)$/]",
+        "message": "<Badge> doesn't accept that prop. Declared props: children, color, rotate."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|variant|size|onClick|type|disabled|key|ref|className|style|children)$/]",
+        "message": "<Button> doesn't accept that prop. Declared props: children, variant, size, onClick, type, disabled."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute[name.name='variant'] > Literal[value!=/^(?:primary|secondary|inverse|ghost)$/]",
+        "message": "<Button> variant must be one of 'primary' | 'secondary' | 'inverse' | 'ghost'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute[name.name='size'] > Literal[value!=/^(?:sm|md|lg)$/]",
+        "message": "<Button> size must be one of 'sm' | 'md' | 'lg'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute[name.name='type'] > Literal[value!=/^(?:button|submit|reset)$/]",
+        "message": "<Button> type must be one of 'button' | 'submit' | 'reset'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Card'] > JSXAttribute > JSXIdentifier[name!=/^(?:label|title|children|inverse|style|key|ref|className|style|children)$/]",
+        "message": "<Card> doesn't accept that prop. Declared props: label, title, children, inverse, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Divider'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|color|as|key|ref|className|style|children)$/]",
+        "message": "<Divider> doesn't accept that prop. Declared props: children, color, as."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Divider'] > JSXAttribute[name.name='color'] > Literal[value!=/^(?:white|accent)$/]",
+        "message": "<Divider> color must be one of 'white' | 'accent'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='SectionHeader'] > JSXAttribute > JSXIdentifier[name!=/^(?:number|name|note|key|ref|className|style|children)$/]",
+        "message": "<SectionHeader> doesn't accept that prop. Declared props: number, name, note."
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/index.js"
+      ],
+      "rules": {
+        "no-restricted-imports": "off"
+      }
+    }
+  ],
+  "x-omelette": {
+    "components": {
+      "Badge": {
+        "replaces": []
+      },
+      "Button": {
+        "replaces": []
+      },
+      "Card": {
+        "replaces": []
+      },
+      "Divider": {
+        "replaces": []
+      },
+      "SectionHeader": {
+        "replaces": []
+      }
+    },
+    "tokens": [
+      "--border-width-lg",
+      "--border-width-md",
+      "--border-width-sm",
+      "--cimento",
+      "--color-accent",
+      "--color-accent-photo",
+      "--color-accent-print",
+      "--color-accent-process",
+      "--color-accent-surface",
+      "--color-bg",
+      "--color-bg-inverse",
+      "--color-border",
+      "--color-border-inverse",
+      "--color-fg",
+      "--color-fg-inverse",
+      "--color-muted",
+      "--color-surface-alt",
+      "--color-surface-dark",
+      "--concreto",
+      "--fita-h",
+      "--fita-w",
+      "--fs-body",
+      "--fs-body-print",
+      "--fs-caption",
+      "--fs-lede",
+      "--fs-quote",
+      "--fs-service",
+      "--fs-shout",
+      "--fs-tag",
+      "--fs-title",
+      "--grafite",
+      "--kraft",
+      "--lh-body",
+      "--lh-lede",
+      "--lh-quote",
+      "--lh-shout",
+      "--lh-title",
+      "--page-max-width",
+      "--page-pad",
+      "--papel",
+      "--proc-navy",
+      "--radius",
+      "--ratio-accent",
+      "--ratio-contrast",
+      "--ratio-neutral",
+      "--section-pad",
+      "--shadow-hard",
+      "--sp-1",
+      "--sp-2",
+      "--sp-3",
+      "--sp-4",
+      "--sp-5",
+      "--sp-6",
+      "--sp-7",
+      "--sp-8",
+      "--sp-9",
+      "--sup-teal",
+      "--t-cartaz",
+      "--t-corpo",
+      "--t-mao",
+      "--t-pixo",
+      "--t-punk",
+      "--t-serifa",
+      "--text-body",
+      "--text-display",
+      "--text-editorial",
+      "--text-hand",
+      "--text-punk",
+      "--text-tag",
+      "--tinta",
+      "--tracking-label",
+      "--tracking-service",
+      "--vermelho",
+      "--vermelho-c",
+      "--vermelho-q"
+    ],
+    "tokenKinds": {
+      "--tinta": "color",
+      "--papel": "color",
+      "--vermelho": "color",
+      "--vermelho-q": "color",
+      "--vermelho-c": "color",
+      "--concreto": "color",
+      "--cimento": "color",
+      "--grafite": "color",
+      "--sup-teal": "color",
+      "--proc-navy": "color",
+      "--kraft": "color",
+      "--color-bg": "color",
+      "--color-bg-inverse": "color",
+      "--color-fg": "color",
+      "--color-fg-inverse": "color",
+      "--color-accent": "color",
+      "--color-accent-print": "color",
+      "--color-accent-photo": "color",
+      "--color-border": "color",
+      "--color-border-inverse": "color",
+      "--color-muted": "color",
+      "--color-surface-alt": "color",
+      "--color-surface-dark": "color",
+      "--color-accent-surface": "color",
+      "--color-accent-process": "color",
+      "--ratio-neutral": "spacing",
+      "--ratio-contrast": "spacing",
+      "--ratio-accent": "spacing",
+      "--t-cartaz": "font",
+      "--t-corpo": "font",
+      "--t-serifa": "font",
+      "--t-mao": "font",
+      "--t-pixo": "font",
+      "--t-punk": "font",
+      "--fs-body": "other",
+      "--fs-body-print": "other",
+      "--fs-service": "other",
+      "--fs-caption": "other",
+      "--fs-quote": "other",
+      "--fs-lede": "other",
+      "--fs-title": "other",
+      "--fs-shout": "other",
+      "--fs-tag": "other",
+      "--lh-shout": "other",
+      "--lh-title": "other",
+      "--lh-body": "other",
+      "--lh-quote": "other",
+      "--lh-lede": "other",
+      "--text-display": "font",
+      "--text-body": "font",
+      "--text-editorial": "font",
+      "--text-hand": "font",
+      "--text-tag": "font",
+      "--text-punk": "font",
+      "--tracking-service": "spacing",
+      "--tracking-label": "spacing",
+      "--sp-1": "spacing",
+      "--sp-2": "spacing",
+      "--sp-3": "spacing",
+      "--sp-4": "spacing",
+      "--sp-5": "spacing",
+      "--sp-6": "spacing",
+      "--sp-7": "spacing",
+      "--sp-8": "spacing",
+      "--sp-9": "spacing",
+      "--section-pad": "spacing",
+      "--page-max-width": "spacing",
+      "--page-pad": "spacing",
+      "--border-width-sm": "spacing",
+      "--border-width-md": "spacing",
+      "--border-width-lg": "spacing",
+      "--radius": "radius",
+      "--shadow-hard": "shadow",
+      "--fita-w": "spacing",
+      "--fita-h": "spacing"
+    },
+    "fontFamilies": [
+      "Affigere",
+      "Coolvetica",
+      "Coolvetica Condensed",
+      "Coolvetica Cram",
+      "Coolvetica Heavy Compressed",
+      "DuchaCompleta",
+      "HitMePunk",
+      "HitMePunk-02",
+      "HitMePunk-03",
+      "HitMePunk-04",
+      "HitMePunk-05",
+      "HitMePunk-06",
+      "HitMePunk-07",
+      "HitMePunk-08",
+      "HitMePunk-09",
+      "HitMePunk-10",
+      "HitMePunk-11",
+      "HitMePunk-12",
+      "HitMePunk-13",
+      "HitMePunk-14",
+      "Libre Caslon Text",
+      "TeAmoJessica"
+    ]
+  }
+}

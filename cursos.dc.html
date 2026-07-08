@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <title>Cursos e Programação — IMPRO.SP</title>
+  <meta name="description" content="Cursos, workshops e mostras abertas da IMPRO.SP — escola de improvisação teatral em São Paulo. Inscrições abertas: Workshop FIGURA.">
+  <link rel="stylesheet" href="_ds/impro-sp-design-system-8fc6055e-466b-4335-a237-85803bc66a28/tokens/fonts.css">
+  <link rel="stylesheet" href="_ds/impro-sp-design-system-8fc6055e-466b-4335-a237-85803bc66a28/tokens/colors.css">
+  <link rel="stylesheet" href="_ds/impro-sp-design-system-8fc6055e-466b-4335-a237-85803bc66a28/tokens/typography.css">
+  <link rel="stylesheet" href="_ds/impro-sp-design-system-8fc6055e-466b-4335-a237-85803bc66a28/tokens/spacing.css">
+  <link rel="stylesheet" href="_ds/impro-sp-design-system-8fc6055e-466b-4335-a237-85803bc66a28/base.css">
+  <link rel="stylesheet" href="_ds/impro-sp-design-system-8fc6055e-466b-4335-a237-85803bc66a28/styles.css">
+  <script src="_ds/impro-sp-design-system-8fc6055e-466b-4335-a237-85803bc66a28/_ds_bundle.js"></script>
+  <style>
+    a{color:var(--vermelho)}
+    a:hover{color:var(--vermelho-c)}
+  </style>
+</helmet>
+
+<div class="grain-overlay"></div>
+
+<dc-import name="Nav" active="cursos" lang="pt" hint-size="100%,84px"></dc-import>
+
+<header class="secao secao--tinta" data-screen-label="Cursos — Abertura" style="padding:clamp(40px,6vw,72px) 0">
+  <div class="pagina">
+    <h1 style="font-family:var(--text-display);font-size:clamp(48px,8.5vw,120px);line-height:.85;text-transform:uppercase;max-width:14ch">Cursos e <span class="linha-vermelha">programação</span></h1>
+    <div style="display:flex;align-items:baseline;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-top:28px">
+      <p style="font-size:clamp(17px,1.8vw,20px);max-width:52ch">O que está com inscrição aberta, o que está no laboratório e o que vem depois.</p>
+      <span class="mao" style="font-size:clamp(19px,2.1vw,24px);transform:rotate(-2deg)">a grade é viva, volta sempre</span>
+    </div>
+  </div>
+</header>
+
+<section class="secao" data-screen-label="Cursos — Inscrições abertas · FIGURA">
+  <div class="pagina">
+    <div class="cap">
+      <span class="cap__num">01</span>
+      <h2 class="cap__nome">Inscrições abertas</h2>
+      <span class="cap__nota">turma de julho · barra funda</span>
+    </div>
+    <div class="grade g2" style="align-items:start;gap:clamp(32px,5vw,64px)">
+      <div style="display:flex;flex-direction:column;gap:24px">
+        <sc-if value="{{ figuraAberto }}" hint-placeholder-val="{{ true }}">
+          <span class="carimbo">Inscrições abertas</span>
+        </sc-if>
+        <sc-if value="{{ figuraLotado }}" hint-placeholder-val="{{ false }}">
+          <span class="carimbo">Turma lotada</span>
+        </sc-if>
+        <div>
+          <h3 style="font-family:var(--text-display);font-size:clamp(44px,6vw,80px);line-height:.85;text-transform:uppercase">Workshop Figura</h3>
+          <p class="servico" style="font-size:15px;margin-top:12px">Estímulos visuais para a improvisação · com Gabriel Caropreso</p>
+        </div>
+        <div class="prosa">
+          <p>Aulas práticas. Usamos imagens estáticas — fotos, desenhos, pinturas figurativas e abstratas — como disparadores para a cena.</p>
+          <p>O trabalho foca em extrair personagens, cenários e narrativas dos detalhes visuais, sem depender de texto ou temas verbais. Investigamos a criação de imagens oníricas no palco e a interação com a imagem como espaço. Inspiração em foto-novelas e quadrinhos.</p>
+          <p><strong>A mostra final.</strong> O processo encerra com uma apresentação pública do formato FIGURA: uma performance de improvisação cênica construída a partir de fotos tiradas das redes sociais do público presente.</p>
+          <p style="color:var(--concreto);font-size:15px">Lotação de público e condições de acessibilidade da mostra final: em confirmação com o espaço.</p>
+        </div>
+        <p style="font-size:15px">Quem conduz: <a href="quem-somos.dc.html" style="font-weight:700;color:var(--tinta)" style-hover="color:var(--vermelho)">Gabriel Caropreso →</a></p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:28px">
+        <div class="cartao cartao--tinta" style="box-shadow:6px 6px 0 rgba(0,0,0,.18)">
+          <span class="rotulo" style="color:var(--vermelho)">Serviço</span>
+          <div style="display:flex;flex-direction:column;gap:11px;margin-top:6px">
+            <span style="font-size:15px"><strong class="servico" style="color:var(--vermelho);font-size:13.5px;margin-right:8px">Quando</strong> Sábados — 11, 18 e 25 de julho de 2026</span>
+            <span style="font-size:15px"><strong class="servico" style="color:var(--vermelho);font-size:13.5px;margin-right:8px">Horário</strong> Das 15h às 18h</span>
+            <span style="font-size:15px"><strong class="servico" style="color:var(--vermelho);font-size:13.5px;margin-right:8px">Onde</strong> Porão Cultural (anexo ao Porão da Cerveja) — Barra Funda, São Paulo/SP</span>
+            <span style="font-size:15px"><strong class="servico" style="color:var(--vermelho);font-size:13.5px;margin-right:8px">Endereço</strong> Rua Lopes de Oliveira, 610 — sobreloja. A um quarteirão da estação Marechal Deodoro</span>
+            <span style="font-size:15px"><strong class="servico" style="color:var(--vermelho);font-size:13.5px;margin-right:8px">Preço</strong> R$ 180</span>
+            <span style="font-size:15px"><strong class="servico" style="color:var(--vermelho);font-size:13.5px;margin-right:8px">Lotação</strong> Turma de 20 alunos</span>
+            <span style="font-size:15px"><strong class="servico" style="color:var(--vermelho);font-size:13.5px;margin-right:8px">Inscrição</strong> WhatsApp +55 11 99114-9592</span>
+          </div>
+        </div>
+        <sc-if value="{{ figuraAberto }}" hint-placeholder-val="{{ true }}">
+          <a href="{{ waFigura }}" target="_blank" rel="noopener" style="text-decoration:none;align-self:flex-start">
+            <x-import component-from-global-scope="IMPROSPDesignSystem_8fc605.Button" size="lg" hint-size="260px,58px">Quero me inscrever</x-import>
+          </a>
+        </sc-if>
+        <div class="cartao">
+          <span class="rotulo rotulo--v">Ficha técnica</span>
+          <div style="display:flex;flex-direction:column;gap:9px;margin-top:6px;font-size:15px">
+            <span><strong class="servico" style="font-size:12.5px;margin-right:8px">Gestão, mídia e direção geral</strong> @vitalianomerino</span>
+            <span><strong class="servico" style="font-size:12.5px;margin-right:8px">Produção executiva</strong> @andervilela2701</span>
+            <span><strong class="servico" style="font-size:12.5px;margin-right:8px">Supervisão de projetos</strong> @recampos73</span>
+            <span><strong class="servico" style="font-size:12.5px;margin-right:8px">Assessoria de imprensa</strong> @canal_aberto</span>
+            <span><strong class="servico" style="font-size:12.5px;margin-right:8px">Espaço</strong> Porão Cultural · @poraodacervejasp</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="secao secao--cimento" data-screen-label="Cursos — No lab / Em breve">
+  <div class="pagina">
+    <div class="cap">
+      <span class="cap__num">02</span>
+      <h2 class="cap__nome">No lab / Em breve</h2>
+      <span class="cap__nota">a gente também tá descobrindo</span>
+    </div>
+    <div class="grade g2" style="align-items:stretch;gap:clamp(28px,4vw,48px)">
+      <div class="cartao" style="display:flex;flex-direction:column;gap:20px;box-shadow:6px 6px 0 rgba(0,0,0,.18)">
+        <span class="carimbo" style="align-self:flex-start">Em breve</span>
+        <div>
+          <h3 style="font-family:var(--text-display);font-size:clamp(36px,4.5vw,56px);line-height:.85;text-transform:uppercase">Workshop Sonora</h3>
+          <p class="servico" style="font-size:14px;margin-top:10px">Improvisação no escuro · com Gabriel Caropreso</p>
+        </div>
+        <div class="prosa" style="font-size:16px">
+          <p>Experiência inteiramente prática realizada em blecaute total. Investigamos a criação de cenas, ambientes e personagens usando apenas som: expressão vocal, percussão corporal, ruídos e música ao vivo.</p>
+          <p>Foco na escuta absoluta e na precisão imaginativa sem referências visuais. Diálogo com estruturas de podcasts narrativos e jogos de escuta coletiva.</p>
+          <p><strong>A mostra final.</strong> Apresentação pública conduzida inteiramente através do som. Elenco e plateia dividem o mesmo espaço no escuro absoluto.</p>
+        </div>
+        <a href="{{ waSonora }}" target="_blank" rel="noopener" style="text-decoration:none;margin-top:auto;align-self:flex-start">
+          <x-import component-from-global-scope="IMPROSPDesignSystem_8fc605.Button" variant="secondary" hint-size="220px,48px">Me avise quando abrir</x-import>
+        </a>
+      </div>
+      <div class="cartao" style="display:flex;flex-direction:column;gap:20px;box-shadow:6px 6px 0 rgba(0,0,0,.18)">
+        <span class="carimbo" style="align-self:flex-start">Aguardando espaço</span>
+        <div>
+          <h3 style="font-family:var(--text-display);font-size:clamp(36px,4.5vw,56px);line-height:.85;text-transform:uppercase">Masterclass Híbrida</h3>
+          <p class="servico" style="font-size:14px;margin-top:10px">Pesquisa de linguagem · Gabriel Caropreso, Maro Lesioti (Atenas) e Luana Proença (Brasília)</p>
+        </div>
+        <div class="prosa" style="font-size:16px">
+          <p>Curso com duração de três meses. Formato de trabalho compartilhado: a sala de ensaio é presencial em São Paulo, comandada por Gabriel, conectada em tempo real com as professoras-mestras online, com tradução em tempo real.</p>
+          <p>Investigação cênica continuada com foco em direção artística e improvisação contemporânea. Aguardando definição de espaço para abertura de turma.</p>
+        </div>
+        <a href="{{ waMasterclass }}" target="_blank" rel="noopener" style="text-decoration:none;margin-top:auto;align-self:flex-start">
+          <x-import component-from-global-scope="IMPROSPDesignSystem_8fc605.Button" variant="secondary" hint-size="220px,48px">Me avise quando abrir</x-import>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="secao secao--tinta" data-screen-label="Cursos — Futuro">
+  <div class="pagina">
+    <div class="cap">
+      <span class="cap__num">03</span>
+      <h2 class="cap__nome">Futuro</h2>
+      <span class="cap__nota">pesquisa contínua</span>
+    </div>
+    <div class="grade g2" style="align-items:start;gap:clamp(32px,5vw,64px)">
+      <div>
+        <h3 style="font-family:var(--text-display);font-size:clamp(40px,5.5vw,68px);line-height:.85;text-transform:uppercase;max-width:12ch">Especialização em <span class="linha-vermelha">Improvisação Teatral</span></h3>
+        <p class="servico" style="font-size:14px;margin-top:16px;color:var(--concreto)">Curso de longa duração · 2 anos</p>
+      </div>
+      <div class="prosa">
+        <p>Nosso plano de formação mais extenso, com duração de 2 anos. Uma imersão profunda na técnica e no risco da composição ao vivo.</p>
+        <p>O currículo pedagógico e a coordenação artística são assinados conjuntamente por Gabriel Caropreso, Tamara Borges e Maro Lesioti. Um programa estruturado para formar elencos profissionais e consolidar núcleos de pesquisa contínua em São Paulo.</p>
+        <p class="mao" style="font-size:21px">em desenho. sem pressa, sem truque.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<dc-import name="Footer" lang="pt" hint-size="100%,320px"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;figuraAberto&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Programação&quot;},&quot;whatsapp&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;5511991149592&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Contato&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const numero = (this.props.whatsapp ?? '5511991149592').replace(/\D/g, '');
+    const wa = (msg) => 'https://wa.me/' + numero + '?text=' + encodeURIComponent(msg);
+    const aberto = this.props.figuraAberto ?? true;
+    return {
+      figuraAberto: aberto,
+      figuraLotado: !aberto,
+      waFigura: wa('Olá, quero me inscrever no Workshop FIGURA de julho.'),
+      waSonora: wa('Olá, quero ser avisade quando abrir turma do Workshop SONORA.'),
+      waMasterclass: wa('Olá, quero ser avisade quando abrir turma da Masterclass Híbrida.'),
+    };
+  }
+}
+</script>
+</body>
+</html>

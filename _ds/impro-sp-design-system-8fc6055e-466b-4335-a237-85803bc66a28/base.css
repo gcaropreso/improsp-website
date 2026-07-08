@@ -1,0 +1,84 @@
+/* ============================================================
+   IMPRO.SP — Base / global styles + shared brand utility classes
+   Mirrors the vocabulary of the source brand book so components
+   and pages can reuse the same class names (.cartao, .rotulo, ...).
+   ============================================================ */
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+
+body{
+  background:var(--color-bg);
+  color:var(--color-fg);
+  font-family:var(--text-body);
+  font-size:var(--fs-body);
+  line-height:var(--lh-body);
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* fixed grain overlay — the "xerox & noise" texture, used near-globally */
+.grain-overlay{content:'';position:fixed;inset:0;pointer-events:none;z-index:9999;opacity:.45;mix-blend-mode:multiply;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='linear' slope='0.13'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E")}
+::selection{background:var(--color-accent);color:#fff}
+
+.pagina{max-width:var(--page-max-width);margin:0 auto;padding:0 var(--page-pad)}
+.secao{padding:var(--section-pad) 0;position:relative}
+.secao--tinta{background:var(--color-bg-inverse);color:var(--color-fg-inverse)}
+.secao--grafite{background:var(--color-surface-dark);color:var(--color-fg-inverse)}
+.secao--vermelha{background:var(--color-accent-print);color:#fff}
+.secao--cimento{background:var(--color-surface-alt)}
+
+/* chapter / section header */
+.cap{display:flex;align-items:baseline;gap:16px;border-top:var(--border-width-lg) solid currentColor;padding-top:14px;margin-bottom:clamp(32px,5vw,64px);flex-wrap:wrap}
+.cap__num{font-family:var(--text-display);font-size:clamp(42px,6vw,76px);line-height:.85;color:var(--color-accent)}
+.secao--vermelha .cap__num{color:var(--color-fg)}
+.cap__nome{font-family:var(--text-display);font-size:clamp(32px,5.2vw,60px);line-height:.9;text-transform:uppercase}
+.cap__nota{font-family:var(--text-hand);font-size:clamp(17px,1.9vw,23px);color:var(--color-accent);transform:rotate(-2deg);margin-left:auto}
+.secao--tinta .cap__nota,.secao--grafite .cap__nota,.secao--vermelha .cap__nota{color:var(--color-fg-inverse)}
+
+/* the white / red underline — brand gesture #1 */
+.linha-branca{box-decoration-break:clone;-webkit-box-decoration-break:clone;background-image:linear-gradient(#fff,#fff);background-repeat:no-repeat;background-size:100% 0.22em;background-position:0 82%}
+.linha-vermelha{box-decoration-break:clone;-webkit-box-decoration-break:clone;background-image:linear-gradient(var(--color-accent),var(--color-accent));background-repeat:no-repeat;background-size:100% 0.22em;background-position:0 82%}
+
+/* taped-down rectangle */
+.fita{position:absolute;width:var(--fita-w);height:var(--fita-h);background:rgba(255,255,255,.5);border-left:1px dashed rgba(0,0,0,.15);border-right:1px dashed rgba(0,0,0,.15);box-shadow:0 1px 3px rgba(0,0,0,.18);backdrop-filter:blur(1px)}
+.secao--tinta .fita,.secao--grafite .fita{background:rgba(255,255,255,.26)}
+
+/* rubber-stamp label */
+.carimbo{display:inline-block;font-family:var(--text-body);font-weight:700;text-transform:uppercase;letter-spacing:var(--tracking-label);font-size:14px;color:var(--color-accent);border:var(--border-width-md) solid var(--color-accent);padding:6px 13px;transform:rotate(-4deg);-webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='60'%3E%3Cfilter id='r'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.35' numOctaves='3'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='0 .6 1 1 1 1 1 1'/%3E%3C/feComponentTransfer%3E%3CfeComposite operator='in' in2='SourceGraphic'/%3E%3C/filter%3E%3Crect width='200' height='60' fill='%23000' filter='url(%23r)'/%3E%3C/svg%3E");-webkit-mask-size:cover}
+
+.mao{font-family:var(--text-hand);color:var(--color-accent);line-height:1.25}
+.secao--tinta .mao,.secao--grafite .mao{color:var(--color-fg-inverse)}
+.pixo{font-family:var(--text-tag);line-height:.95}
+
+.prosa{max-width:64ch;font-size:clamp(16px,1.5vw,19px)}
+.prosa p+p{margin-top:1.05em}
+.prosa strong{font-weight:700}
+
+.lede{font-family:var(--text-editorial);font-size:var(--fs-lede);line-height:var(--lh-lede);max-width:50ch;font-weight:400}
+.lede em{color:var(--color-accent);font-style:italic}
+.secao--tinta .lede em,.secao--grafite .lede em{color:#fff}
+.citacao{font-family:var(--text-editorial);font-style:italic;font-size:var(--fs-quote);line-height:var(--lh-quote)}
+
+.grade{display:grid;gap:var(--sp-4)}
+@media(min-width:760px){.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:560px) and (max-width:759px){.g3{grid-template-columns:1fr 1fr}}
+
+/* card */
+.cartao{border:var(--border-width-md) solid var(--color-border);background:var(--color-bg);color:var(--color-fg);padding:var(--sp-4);position:relative}
+.secao--tinta .cartao,.secao--grafite .cartao{border-color:var(--color-border-inverse)}
+.cartao--tinta{background:var(--color-bg-inverse);color:var(--color-fg-inverse);border-color:var(--color-bg-inverse)}
+.cartao h4{font-family:var(--text-display);text-transform:uppercase;font-size:20px;line-height:1.3;letter-spacing:.3px;margin-bottom:var(--sp-6)}
+.cartao p{font-size:15.5px;line-height:1.5}
+
+.rotulo{font-family:var(--text-body);font-weight:700;text-transform:uppercase;letter-spacing:var(--tracking-service);font-size:var(--fs-caption);display:block;margin-bottom:8px}
+.rotulo--v{color:var(--color-accent)}
+.servico{font-family:var(--text-body);font-weight:700;text-transform:uppercase;letter-spacing:var(--tracking-label)}
+
+table{border-collapse:collapse;width:100%;font-size:15px}
+th,td{border:var(--border-width-sm) solid currentColor;padding:9px 12px;text-align:left;vertical-align:top}
+th{font-family:var(--text-body);font-weight:700;text-transform:uppercase;letter-spacing:1px;font-size:13.5px}
+code{font-family:'Courier New',monospace;font-weight:700;background:rgba(0,0,0,.08);padding:1px 6px}
+.secao--tinta code,.secao--grafite code{background:rgba(255,255,255,.14)}
+.tachado{text-decoration:line-through;text-decoration-color:var(--color-accent);text-decoration-thickness:3px}

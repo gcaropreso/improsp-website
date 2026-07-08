@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <title>Courses &amp; Program — IMPRO.SP</title>
+  <meta name="description" content="Courses, workshops and open showcases at IMPRO.SP — theatrical improvisation school in São Paulo, Brazil. Enrollment open: FIGURA workshop.">
+  <link rel="stylesheet" href="_ds/impro-sp-design-system-8fc6055e-466b-4335-a237-85803bc66a28/tokens/fonts.css">
+  <link rel="stylesheet" href="_ds/impro-sp-design-system-8fc6055e-466b-4335-a237-85803bc66a28/tokens/colors.css">
+  <link rel="stylesheet" href="_ds/impro-sp-design-system-8fc6055e-466b-4335-a237-85803bc66a28/tokens/typography.css">
+  <link rel="stylesheet" href="_ds/impro-sp-design-system-8fc6055e-466b-4335-a237-85803bc66a28/tokens/spacing.css">
+  <link rel="stylesheet" href="_ds/impro-sp-design-system-8fc6055e-466b-4335-a237-85803bc66a28/base.css">
+  <link rel="stylesheet" href="_ds/impro-sp-design-system-8fc6055e-466b-4335-a237-85803bc66a28/styles.css">
+  <script src="_ds/impro-sp-design-system-8fc6055e-466b-4335-a237-85803bc66a28/_ds_bundle.js"></script>
+  <style>
+    a{color:var(--vermelho)}
+    a:hover{color:var(--vermelho-c)}
+  </style>
+</helmet>
+
+<div class="grain-overlay"></div>
+
+<dc-import name="Nav" active="cursos" lang="en" hint-size="100%,84px"></dc-import>
+
+<header class="secao secao--tinta" data-screen-label="Courses EN — Opening" style="padding:clamp(40px,6vw,72px) 0">
+  <div class="pagina">
+    <h1 style="font-family:var(--text-display);font-size:clamp(48px,8.5vw,120px);line-height:.85;text-transform:uppercase;max-width:14ch">Courses &amp; <span class="linha-vermelha">program</span></h1>
+    <div style="display:flex;align-items:baseline;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-top:28px">
+      <p style="font-size:clamp(17px,1.8vw,20px);max-width:52ch">What is open for enrollment, what is in the lab, and what comes next.</p>
+      <span class="mao" style="font-size:clamp(19px,2.1vw,24px);transform:rotate(-2deg)">the program is alive, come back often</span>
+    </div>
+  </div>
+</header>
+
+<section class="secao" data-screen-label="Courses EN — Enrollment open · FIGURA">
+  <div class="pagina">
+    <div class="cap">
+      <span class="cap__num">01</span>
+      <h2 class="cap__nome">Enrollment open</h2>
+      <span class="cap__nota">july group · barra funda</span>
+    </div>
+    <div class="grade g2" style="align-items:start;gap:clamp(32px,5vw,64px)">
+      <div style="display:flex;flex-direction:column;gap:24px">
+        <sc-if value="{{ figuraAberto }}" hint-placeholder-val="{{ true }}">
+          <span class="carimbo">Enrollment open</span>
+        </sc-if>
+        <sc-if value="{{ figuraLotado }}" hint-placeholder-val="{{ false }}">
+          <span class="carimbo">Group full</span>
+        </sc-if>
+        <div>
+          <h3 style="font-family:var(--text-display);font-size:clamp(44px,6vw,80px);line-height:.85;text-transform:uppercase">Figura Workshop</h3>
+          <p class="servico" style="font-size:15px;margin-top:12px">Visual stimuli for improvisation · with Gabriel Caropreso</p>
+        </div>
+        <div class="prosa">
+          <p>Practical classes. We use still images — photos, drawings, figurative and abstract paintings — as triggers for the scene.</p>
+          <p>The work focuses on extracting characters, settings and narratives from visual detail, without depending on text or verbal themes. We investigate the creation of dreamlike stage imagery and the interaction with the image as space. Inspired by photo-novels and comics.</p>
+          <p><strong>The final showcase.</strong> The process closes with a public performance of the FIGURA format: scenic improvisation built from photos taken from the social media of the audience present.</p>
+          <p style="color:var(--concreto);font-size:15px">Audience capacity and accessibility conditions for the final showcase: being confirmed with the venue.</p>
+        </div>
+        <p style="font-size:15px">Led by: <a href="quem-somos-en.dc.html" style="font-weight:700;color:var(--tinta)" style-hover="color:var(--vermelho)">Gabriel Caropreso →</a></p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:28px">
+        <div class="cartao cartao--tinta" style="box-shadow:6px 6px 0 rgba(0,0,0,.18)">
+          <span class="rotulo" style="color:var(--vermelho)">Details</span>
+          <div style="display:flex;flex-direction:column;gap:11px;margin-top:6px">
+            <span style="font-size:15px"><strong class="servico" style="color:var(--vermelho);font-size:13.5px;margin-right:8px">When</strong> Saturdays — July 11, 18 &amp; 25, 2026</span>
+            <span style="font-size:15px"><strong class="servico" style="color:var(--vermelho);font-size:13.5px;margin-right:8px">Time</strong> 3pm to 6pm</span>
+            <span style="font-size:15px"><strong class="servico" style="color:var(--vermelho);font-size:13.5px;margin-right:8px">Where</strong> Porão Cultural (annex to Porão da Cerveja) — Barra Funda, São Paulo, Brazil</span>
+            <span style="font-size:15px"><strong class="servico" style="color:var(--vermelho);font-size:13.5px;margin-right:8px">Address</strong> Rua Lopes de Oliveira, 610 — upper floor. One block from Marechal Deodoro station</span>
+            <span style="font-size:15px"><strong class="servico" style="color:var(--vermelho);font-size:13.5px;margin-right:8px">Price</strong> R$ 180</span>
+            <span style="font-size:15px"><strong class="servico" style="color:var(--vermelho);font-size:13.5px;margin-right:8px">Capacity</strong> Group of 20 students</span>
+            <span style="font-size:15px"><strong class="servico" style="color:var(--vermelho);font-size:13.5px;margin-right:8px">Sign up</strong> WhatsApp +55 11 99114-9592</span>
+          </div>
+        </div>
+        <sc-if value="{{ figuraAberto }}" hint-placeholder-val="{{ true }}">
+          <a href="{{ waFigura }}" target="_blank" rel="noopener" style="text-decoration:none;align-self:flex-start">
+            <x-import component-from-global-scope="IMPROSPDesignSystem_8fc605.Button" size="lg" hint-size="220px,58px">Sign me up</x-import>
+          </a>
+        </sc-if>
+        <div class="cartao">
+          <span class="rotulo rotulo--v">Credits</span>
+          <div style="display:flex;flex-direction:column;gap:9px;margin-top:6px;font-size:15px">
+            <span><strong class="servico" style="font-size:12.5px;margin-right:8px">Management, media &amp; general direction</strong> @vitalianomerino</span>
+            <span><strong class="servico" style="font-size:12.5px;margin-right:8px">Executive production</strong> @andervilela2701</span>
+            <span><strong class="servico" style="font-size:12.5px;margin-right:8px">Project supervision</strong> @recampos73</span>
+            <span><strong class="servico" style="font-size:12.5px;margin-right:8px">Press office</strong> @canal_aberto</span>
+            <span><strong class="servico" style="font-size:12.5px;margin-right:8px">Venue</strong> Porão Cultural · @poraodacervejasp</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="secao secao--cimento" data-screen-label="Courses EN — In the lab / Coming soon">
+  <div class="pagina">
+    <div class="cap">
+      <span class="cap__num">02</span>
+      <h2 class="cap__nome">In the lab / Soon</h2>
+      <span class="cap__nota">we're still figuring it out too</span>
+    </div>
+    <div class="grade g2" style="align-items:stretch;gap:clamp(28px,4vw,48px)">
+      <div class="cartao" style="display:flex;flex-direction:column;gap:20px;box-shadow:6px 6px 0 rgba(0,0,0,.18)">
+        <span class="carimbo" style="align-self:flex-start">Coming soon</span>
+        <div>
+          <h3 style="font-family:var(--text-display);font-size:clamp(36px,4.5vw,56px);line-height:.85;text-transform:uppercase">Sonora Workshop</h3>
+          <p class="servico" style="font-size:14px;margin-top:10px">Improvisation in the dark · with Gabriel Caropreso</p>
+        </div>
+        <div class="prosa" style="font-size:16px">
+          <p>An entirely practical experience held in total blackout. We investigate the creation of scenes, environments and characters using only sound: vocal expression, body percussion, noise and live music.</p>
+          <p>Focus on absolute listening and imaginative precision without visual references. In dialogue with narrative-podcast structures and collective listening games.</p>
+          <p><strong>The final showcase.</strong> A public performance driven entirely by sound. Cast and audience share the same space in absolute darkness.</p>
+        </div>
+        <a href="{{ waSonora }}" target="_blank" rel="noopener" style="text-decoration:none;margin-top:auto;align-self:flex-start">
+          <x-import component-from-global-scope="IMPROSPDesignSystem_8fc605.Button" variant="secondary" hint-size="220px,48px">Notify me</x-import>
+        </a>
+      </div>
+      <div class="cartao" style="display:flex;flex-direction:column;gap:20px;box-shadow:6px 6px 0 rgba(0,0,0,.18)">
+        <span class="carimbo" style="align-self:flex-start">Awaiting venue</span>
+        <div>
+          <h3 style="font-family:var(--text-display);font-size:clamp(36px,4.5vw,56px);line-height:.85;text-transform:uppercase">Hybrid Masterclass</h3>
+          <p class="servico" style="font-size:14px;margin-top:10px">Language research · Gabriel Caropreso, Maro Lesioti (Athens) &amp; Luana Proença (Brasília)</p>
+        </div>
+        <div class="prosa" style="font-size:16px">
+          <p>A three-month course. Shared working format: the rehearsal room is in-person in São Paulo, led by Gabriel, connected in real time with the master teachers online, with live translation.</p>
+          <p>Continued scenic investigation focused on artistic direction and contemporary improvisation. Awaiting venue confirmation to open enrollment.</p>
+        </div>
+        <a href="{{ waMasterclass }}" target="_blank" rel="noopener" style="text-decoration:none;margin-top:auto;align-self:flex-start">
+          <x-import component-from-global-scope="IMPROSPDesignSystem_8fc605.Button" variant="secondary" hint-size="220px,48px">Notify me</x-import>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="secao secao--tinta" data-screen-label="Courses EN — Future">
+  <div class="pagina">
+    <div class="cap">
+      <span class="cap__num">03</span>
+      <h2 class="cap__nome">Future</h2>
+      <span class="cap__nota">ongoing research</span>
+    </div>
+    <div class="grade g2" style="align-items:start;gap:clamp(32px,5vw,64px)">
+      <div>
+        <h3 style="font-family:var(--text-display);font-size:clamp(40px,5.5vw,68px);line-height:.85;text-transform:uppercase;max-width:14ch">Specialization in <span class="linha-vermelha">Theatrical Improvisation</span></h3>
+        <p class="servico" style="font-size:14px;margin-top:16px;color:var(--concreto)">Long-term program · 2 years</p>
+      </div>
+      <div class="prosa">
+        <p>Our most extensive training plan, running for 2 years. A deep immersion in the technique and the risk of live composition.</p>
+        <p>The pedagogical curriculum and artistic coordination are jointly signed by Gabriel Caropreso, Tamara Borges and Maro Lesioti. A program structured to train professional casts and consolidate ongoing research groups in São Paulo.</p>
+        <p class="mao" style="font-size:21px">being drafted. no rush, no tricks.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<dc-import name="Footer" lang="en" hint-size="100%,320px"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;figuraAberto&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Program&quot;},&quot;whatsapp&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;5511991149592&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Contact&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const numero = (this.props.whatsapp ?? '5511991149592').replace(/\D/g, '');
+    const wa = (msg) => 'https://wa.me/' + numero + '?text=' + encodeURIComponent(msg);
+    const aberto = this.props.figuraAberto ?? true;
+    return {
+      figuraAberto: aberto,
+      figuraLotado: !aberto,
+      waFigura: wa('Hello! I would like to sign up for the FIGURA workshop in July.'),
+      waSonora: wa('Hello! Please let me know when the SONORA workshop opens.'),
+      waMasterclass: wa('Hello! Please let me know when the Hybrid Masterclass opens.'),
+    };
+  }
+}
+</script>
+</body>
+</html>

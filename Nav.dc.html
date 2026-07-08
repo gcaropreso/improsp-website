@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="_ds/impro-sp-design-system-8fc6055e-466b-4335-a237-85803bc66a28/tokens/fonts.css">
+  <link rel="stylesheet" href="_ds/impro-sp-design-system-8fc6055e-466b-4335-a237-85803bc66a28/tokens/colors.css">
+  <link rel="stylesheet" href="_ds/impro-sp-design-system-8fc6055e-466b-4335-a237-85803bc66a28/tokens/typography.css">
+  <link rel="stylesheet" href="_ds/impro-sp-design-system-8fc6055e-466b-4335-a237-85803bc66a28/tokens/spacing.css">
+  <link rel="stylesheet" href="_ds/impro-sp-design-system-8fc6055e-466b-4335-a237-85803bc66a28/base.css">
+  <style>
+    a{color:var(--vermelho)}
+    a:hover{color:var(--vermelho-c)}
+  </style>
+</helmet>
+<nav style="display:flex;align-items:center;gap:20px;flex-wrap:wrap;padding:14px 24px;border-bottom:4px solid var(--tinta);background:var(--papel);position:relative;z-index:20">
+  <a href="{{ homeHref }}" style="display:flex;align-items:center;text-decoration:none;flex-shrink:0">
+    <img src="images/logo/impro-sp-logo.png" alt="IMPRO.SP" style="height:52px;display:block">
+  </a>
+  <div style="display:flex;gap:22px;flex-wrap:wrap;margin-left:auto;align-items:baseline">
+    <sc-for list="{{ links }}" as="l" hint-placeholder-count="4">
+      <a href="{{ l.href }}" class="{{ l.cls }}" style="font-family:var(--text-body);font-weight:700;text-transform:uppercase;letter-spacing:var(--tracking-label);font-size:14px;color:var(--tinta);text-decoration:none;padding-bottom:3px" style-hover="color:var(--vermelho)">{{ l.label }}</a>
+    </sc-for>
+    <a href="{{ langHref }}" style="font-family:var(--text-body);font-weight:700;text-transform:uppercase;letter-spacing:var(--tracking-label);font-size:14px;color:#fff;background:var(--tinta);padding:4px 10px;text-decoration:none" style-hover="background:var(--vermelho)">{{ langLabel }}</a>
+  </div>
+</nav>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:&quot;100%&quot;,&quot;height&quot;:&quot;90px&quot;},&quot;active&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;home&quot;,&quot;cursos&quot;,&quot;quem&quot;,&quot;inter&quot;],&quot;default&quot;:&quot;home&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;lang&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;pt&quot;,&quot;en&quot;],&quot;default&quot;:&quot;pt&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const lang = this.props.lang ?? 'pt';
+    const active = this.props.active ?? 'home';
+    const pt = lang === 'pt';
+    const pages = [
+      { id: 'home',   pt: ['Home', 'index.dc.html'],                 en: ['Home', 'index-en.dc.html'] },
+      { id: 'cursos', pt: ['Cursos e Programação', 'cursos.dc.html'], en: ['Courses & Program', 'cursos-en.dc.html'] },
+      { id: 'quem',   pt: ['Quem Somos', 'quem-somos.dc.html'],       en: ['Who We Are', 'quem-somos-en.dc.html'] },
+      { id: 'inter',  pt: ['Internacional', 'internacional.dc.html'], en: ['International', 'internacional-en.dc.html'] },
+    ];
+    const links = pages.map((p) => ({
+      href: pt ? p.pt[1] : p.en[1],
+      label: pt ? p.pt[0] : p.en[0],
+      cls: p.id === active ? 'linha-vermelha' : '',
+    }));
+    const current = pages.find((p) => p.id === active) || pages[0];
+    return {
+      links,
+      homeHref: pt ? 'index.dc.html' : 'index-en.dc.html',
+      langHref: pt ? current.en[1] : current.pt[1],
+      langLabel: pt ? 'EN' : 'PT',
+    };
+  }
+}
+</script>
+</body>
+</html>
