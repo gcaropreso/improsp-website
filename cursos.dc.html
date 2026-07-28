@@ -37,66 +37,6 @@
   </div>
 </header>
 
-<section class="secao" data-screen-label="Cursos — Inscrições abertas · FIGURA">
-  <div class="pagina">
-    <div class="cap">
-      <span class="cap__num">01</span>
-      <h2 class="cap__nome">Inscrições abertas</h2>
-      <span class="cap__nota">turma de julho · barra funda</span>
-    </div>
-    <div class="grade g2" style="align-items:start;gap:clamp(32px,5vw,64px)">
-      <div style="display:flex;flex-direction:column;gap:24px">
-        <sc-if value="{{ figuraAberto }}" hint-placeholder-val="{{ true }}">
-          <span class="carimbo">Inscrições abertas</span>
-        </sc-if>
-        <sc-if value="{{ figuraLotado }}" hint-placeholder-val="{{ false }}">
-          <span class="carimbo">Turma lotada</span>
-        </sc-if>
-        <div>
-          <h3 style="font-family:var(--text-display);font-size:clamp(44px,6vw,80px);line-height:.85;text-transform:uppercase">Workshop Figura</h3>
-          <p class="servico" style="font-size:15px;margin-top:12px">Estímulos visuais para a improvisação · com Gabriel Caropreso</p>
-        </div>
-        <div class="prosa">
-          <p>Aulas práticas. Usamos imagens estáticas — fotos, desenhos, pinturas figurativas e abstratas — como disparadores para a cena.</p>
-          <p>O trabalho foca em extrair personagens, cenários e narrativas dos detalhes visuais, sem depender de texto ou temas verbais. Investigamos a criação de imagens oníricas no palco e a interação com a imagem como espaço. Inspiração em foto-novelas e quadrinhos.</p>
-          <p><strong>A mostra final.</strong> O processo encerra com uma apresentação pública do formato FIGURA: uma performance de improvisação cênica construída a partir de fotos tiradas das redes sociais do público presente.</p>
-          <p style="color:var(--concreto);font-size:15px">Lotação de público e condições de acessibilidade da mostra final: em confirmação com o espaço.</p>
-        </div>
-        <p style="font-size:15px">Quem conduz: <a href="quem-somos.dc.html" style="font-weight:700;color:var(--tinta)" style-hover="color:var(--vermelho)">Gabriel Caropreso →</a></p>
-      </div>
-      <div style="display:flex;flex-direction:column;gap:28px">
-        <div class="cartao cartao--tinta" style="box-shadow:6px 6px 0 rgba(0,0,0,.18)">
-          <span class="rotulo" style="color:var(--vermelho)">Serviço</span>
-          <div style="display:flex;flex-direction:column;gap:11px;margin-top:6px">
-            <span style="font-size:15px"><strong class="servico" style="color:var(--vermelho);font-size:13.5px;margin-right:8px">Quando</strong> Sábados — 11, 18 e 25 de julho de 2026</span>
-            <span style="font-size:15px"><strong class="servico" style="color:var(--vermelho);font-size:13.5px;margin-right:8px">Horário</strong> Das 15h às 18h</span>
-            <span style="font-size:15px"><strong class="servico" style="color:var(--vermelho);font-size:13.5px;margin-right:8px">Onde</strong> Porão Cultural (anexo ao Porão da Cerveja) — Barra Funda, São Paulo/SP</span>
-            <span style="font-size:15px"><strong class="servico" style="color:var(--vermelho);font-size:13.5px;margin-right:8px">Endereço</strong> Rua Lopes de Oliveira, 610 — sobreloja. A um quarteirão da estação Marechal Deodoro</span>
-            <span style="font-size:15px"><strong class="servico" style="color:var(--vermelho);font-size:13.5px;margin-right:8px">Preço</strong> R$ 180</span>
-            <span style="font-size:15px"><strong class="servico" style="color:var(--vermelho);font-size:13.5px;margin-right:8px">Lotação</strong> Turma de 20 alunos</span>
-            <span style="font-size:15px"><strong class="servico" style="color:var(--vermelho);font-size:13.5px;margin-right:8px">Inscrição</strong> WhatsApp +55 11 99114-9592</span>
-          </div>
-        </div>
-        <sc-if value="{{ figuraAberto }}" hint-placeholder-val="{{ true }}">
-          <a href="{{ waFigura }}" target="_blank" rel="noopener" style="text-decoration:none;align-self:flex-start">
-            <x-import component-from-global-scope="IMPROSPDesignSystem_8fc605.Button" size="lg" hint-size="260px,58px">Quero me inscrever</x-import>
-          </a>
-        </sc-if>
-        <div class="cartao">
-          <span class="rotulo rotulo--v">Ficha técnica</span>
-          <div style="display:flex;flex-direction:column;gap:9px;margin-top:6px;font-size:15px">
-            <span><strong class="servico" style="font-size:12.5px;margin-right:8px">Gestão, mídia e direção geral</strong> @vitalianomerino</span>
-            <span><strong class="servico" style="font-size:12.5px;margin-right:8px">Produção executiva</strong> @andervilela2701</span>
-            <span><strong class="servico" style="font-size:12.5px;margin-right:8px">Supervisão de projetos</strong> @recampos73</span>
-            <span><strong class="servico" style="font-size:12.5px;margin-right:8px">Assessoria de imprensa</strong> @canal_aberto</span>
-            <span><strong class="servico" style="font-size:12.5px;margin-right:8px">Espaço</strong> Porão Cultural · @poraodacervejasp</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section class="secao secao--cimento" data-screen-label="Cursos — No lab / Em breve">
   <div class="pagina">
     <div class="cap">
