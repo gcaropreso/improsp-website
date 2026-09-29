@@ -30,7 +30,7 @@
   </div>
 </nav>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:&quot;100%&quot;,&quot;height&quot;:&quot;90px&quot;},&quot;active&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;home&quot;,&quot;cursos&quot;,&quot;quem&quot;,&quot;inter&quot;],&quot;default&quot;:&quot;home&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;lang&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;pt&quot;,&quot;en&quot;],&quot;default&quot;:&quot;pt&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:&quot;100%&quot;,&quot;height&quot;:&quot;90px&quot;},&quot;active&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;home&quot;,&quot;cursos&quot;,&quot;quem&quot;,&quot;inter&quot;,&quot;territorio&quot;],&quot;default&quot;:&quot;home&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;lang&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;pt&quot;,&quot;en&quot;],&quot;default&quot;:&quot;pt&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
 class Component extends DCLogic {
   renderVals() {
     const lang = this.props.lang ?? 'pt';
@@ -41,6 +41,7 @@ class Component extends DCLogic {
       { id: 'cursos', pt: ['Cursos e Programação', 'cursos.dc.html'], en: ['Courses & Program', 'cursos-en.dc.html'] },
       { id: 'quem',   pt: ['Quem Somos', 'quem-somos.dc.html'],       en: ['Who We Are', 'quem-somos-en.dc.html'] },
       { id: 'inter',  pt: ['Internacional', 'internacional.dc.html'], en: ['International', 'internacional-en.dc.html'] },
+      { id: 'territorio', pt: ['Território em Cena', 'territorio-em-cena.dc.html'], en: ['Território em Cena', 'territorio-em-cena.dc.html'] },
     ];
     const links = pages.map((p) => ({
       href: pt ? p.pt[1] : p.en[1],

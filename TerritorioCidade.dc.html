@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/impro-sp-design-system-8fc6055e-466b-4335-a237-85803bc66a28/tokens/fonts.css">
+<link rel="stylesheet" href="_ds/impro-sp-design-system-8fc6055e-466b-4335-a237-85803bc66a28/tokens/colors.css">
+<link rel="stylesheet" href="_ds/impro-sp-design-system-8fc6055e-466b-4335-a237-85803bc66a28/tokens/typography.css">
+<link rel="stylesheet" href="_ds/impro-sp-design-system-8fc6055e-466b-4335-a237-85803bc66a28/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/impro-sp-design-system-8fc6055e-466b-4335-a237-85803bc66a28/base.css">
+<link rel="stylesheet" href="_ds/impro-sp-design-system-8fc6055e-466b-4335-a237-85803bc66a28/styles.css">
+<script src="_ds/impro-sp-design-system-8fc6055e-466b-4335-a237-85803bc66a28/_ds_bundle.js"></script>
+</helmet>
+<div style="background:#12100E;color:#D8D5CE">
+
+<header class="secao" data-screen-label="Cidade — Abertura" style="padding:clamp(40px,6vw,80px) 0;color:#D8D5CE">
+<div class="pagina">
+<div class="grade g2" style="align-items:end;gap:clamp(32px,5vw,64px)">
+<div style="display:flex;flex-direction:column;gap:22px">
+<a href="territorio-em-cena.dc.html" class="servico" style="font-size:13.5px;color:#D8D5CE;text-decoration:none" style-hover="color:#FF0000">← Território em Cena · a turnê</a>
+<h1 style="font-family:var(--text-display);font-size:clamp(52px,8vw,112px);line-height:.85;text-transform:uppercase;letter-spacing:.08em">Território<br><span class="linha-vermelha">em cena</span></h1>
+<span style="font-family:var(--text-tag);font-size:clamp(48px,7vw,96px);line-height:.9;color:#FF0000;transform:rotate(-4deg);transform-origin:left;display:inline-block;align-self:flex-start">{{ c.nome }}</span>
+<div style="display:flex;flex-wrap:wrap;gap:10px 28px;border-top:5px solid #D8D5CE;padding-top:16px">
+<div style="display:flex;flex-direction:column;gap:4px"><span class="servico" style="font-size:12.5px;color:#FF0000">Quando</span><span style="font-family:var(--text-display);font-size:clamp(28px,3.4vw,40px);line-height:1;letter-spacing:.08em">{{ c.datas }}</span></div>
+<div style="display:flex;flex-direction:column;gap:4px;max-width:34ch"><span class="servico" style="font-size:12.5px;color:#FF0000">Onde</span><span style="font-size:17px;line-height:1.4">{{ c.localCurto }}</span></div>
+</div>
+</div>
+<div style="position:relative;max-width:560px;width:100%;justify-self:center">
+<img src="{{ c.foto }}" alt="{{ c.fotoAlt }}" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block;filter:grayscale(1) contrast(1.35);border:3px solid #D8D5CE">
+<div class="fita" style="width:120px;height:34px;top:-14px;left:-20px;transform:rotate(-7deg);background:rgba(216,213,206,.35)"></div>
+</div>
+</div>
+</div>
+</header>
+
+<sc-if value="{{ emBreve }}" hint-placeholder-val="{{ false }}">
+<section class="secao" data-screen-label="Cidade — Em breve" style="background:#FF0000;color:#12100E">
+<div class="pagina" style="display:flex;flex-direction:column;gap:28px">
+<span style="font-family:var(--text-tag);font-size:clamp(44px,6vw,80px);line-height:.9;transform:rotate(-3deg);transform-origin:left;display:inline-block;align-self:flex-start">em breve</span>
+<p style="font-family:var(--text-display);font-size:clamp(34px,5vw,64px);line-height:.9;text-transform:uppercase;max-width:18ch;letter-spacing:.08em">Quer que role em Floripa?</p>
+<p style="font-size:19px;line-height:1.5;max-width:52ch">A programação ainda está em construção. Avisa a gente e ajuda a divulgar: chama no zap.</p>
+<a href="{{ waFloripa }}" target="_blank" rel="noopener" style="text-decoration:none;align-self:flex-start"><x-import component-from-global-scope="IMPROSPDesignSystem_8fc605.Button" variant="inverse" size="lg" hint-size="260px,58px">Chamar no WhatsApp</x-import></a>
+</div>
+</section>
+</sc-if>
+
+<sc-if value="{{ temProgramacao }}" hint-placeholder-val="{{ true }}">
+<section class="secao" data-screen-label="Cidade — Programação" style="background:#3A3833;color:#D8D5CE">
+<div class="pagina">
+<div class="cap"><span class="cap__num">01</span><h2 class="cap__nome">Programação</h2><span class="cap__nota" style="color:#D8D5CE">{{ c.notaProg }}</span></div>
+<div style="display:flex;flex-direction:column;gap:clamp(36px,5vw,56px)">
+<sc-for list="{{ c.dias }}" as="d" hint-placeholder-count="3">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:18px 40px;align-items:start">
+<div style="display:flex;flex-direction:column;gap:6px">
+<span style="font-family:var(--text-display);font-size:clamp(56px,7vw,92px);line-height:.85;color:#FF0000;letter-spacing:.08em">{{ d.data }}</span>
+<span class="servico" style="font-size:14px">{{ d.semana }}</span>
+</div>
+<div style="display:flex;flex-direction:column;grid-column:span 2;min-width:0">
+<sc-for list="{{ d.itens }}" as="i" hint-placeholder-count="3">
+<div style="display:grid;grid-template-columns:minmax(88px,120px) minmax(0,1fr);gap:6px 20px;border-top:3px solid #D8D5CE;padding:14px 0 16px">
+<span style="font-family:var(--text-body);font-weight:700;font-size:17px">{{ i.hora }}</span>
+<div style="display:flex;flex-direction:column;gap:5px;min-width:0">
+<span class="servico" style="font-size:12px;color:#FF0000">{{ i.tipo }}</span>
+<span style="font-family:var(--text-display);font-size:clamp(22px,2.4vw,28px);line-height:1;text-transform:uppercase;letter-spacing:.08em">{{ i.titulo }}</span>
+<span style="font-size:15.5px;line-height:1.45;text-wrap:pretty">{{ i.obs }}</span>
+</div>
+</div>
+</sc-for>
+</div>
+</div>
+</sc-for>
+</div>
+</div>
+</section>
+</sc-if>
+
+<sc-if value="{{ temOficinas }}" hint-placeholder-val="{{ true }}">
+<section class="secao" data-screen-label="Cidade — Oficinas" style="background:#12100E;color:#D8D5CE">
+<div class="pagina">
+<div class="cap"><span class="cap__num">02</span><h2 class="cap__nome">As oficinas</h2><span class="cap__nota" style="color:#D8D5CE">em inglês, com tradução ao vivo</span></div>
+<div class="grade g2" style="align-items:stretch;gap:clamp(24px,3vw,40px)">
+<sc-for list="{{ c.oficinas }}" as="o" hint-placeholder-count="2">
+<div style="border:4px solid #D8D5CE;padding:clamp(22px,3vw,32px);display:flex;flex-direction:column;gap:18px">
+<span class="servico" style="font-size:12.5px;color:#FF0000">{{ o.kicker }}</span>
+<h3 style="font-family:var(--text-display);font-size:clamp(30px,3.6vw,46px);line-height:.88;text-transform:uppercase;letter-spacing:.08em">{{ o.titulo }}</h3>
+<span class="servico" style="font-size:13px">{{ o.quem }}</span>
+<p style="font-size:16.5px;line-height:1.55;text-wrap:pretty">{{ o.texto }}</p>
+<sc-if value="{{ o.mostra }}" hint-placeholder-val="{{ false }}">
+<div style="border-top:3px solid #D8D5CE;padding-top:14px;display:flex;flex-direction:column;gap:8px">
+<span class="servico" style="font-size:12.5px">{{ o.mostra }}</span>
+<p style="font-size:15.5px;line-height:1.5">{{ o.mostraTexto }}</p>
+</div>
+</sc-if>
+<span class="servico" style="font-size:13px;margin-top:auto;background:#3A3833;padding:10px 12px;line-height:1.5">{{ o.quando }}</span>
+</div>
+</sc-for>
+</div>
+</div>
+</section>
+</sc-if>
+
+<sc-if value="{{ temProgramacao }}" hint-placeholder-val="{{ true }}">
+<section class="secao" data-screen-label="Cidade — Serviço" style="background:#FF0000;color:#12100E">
+<div class="pagina">
+<div class="cap" style="border-top-color:#12100E"><span class="cap__num" style="color:#12100E">03</span><h2 class="cap__nome">Serviço</h2><span class="cap__nota" style="color:#12100E">tudo que precisa saber</span></div>
+<div class="grade g2" style="align-items:start;gap:clamp(32px,5vw,64px)">
+<div style="display:flex;flex-direction:column">
+<sc-for list="{{ c.servico }}" as="s" hint-placeholder-count="4">
+<div style="display:grid;grid-template-columns:minmax(96px,130px) minmax(0,1fr);gap:16px;border-top:3px solid #12100E;padding:14px 0;align-items:baseline">
+<span class="servico" style="font-size:12.5px">{{ s.k }}</span>
+<span style="font-size:17px;line-height:1.45">{{ s.v }}</span>
+</div>
+</sc-for>
+</div>
+<div style="display:flex;flex-direction:column;gap:22px">
+<sc-if value="{{ temForm }}" hint-placeholder-val="{{ false }}">
+<p style="font-family:var(--text-display);font-size:clamp(36px,4.6vw,60px);line-height:.88;text-transform:uppercase;letter-spacing:.08em">Inscrição aberta</p>
+<a href="{{ c.form }}" target="_blank" rel="noopener" style="text-decoration:none;align-self:flex-start"><x-import component-from-global-scope="IMPROSPDesignSystem_8fc605.Button" variant="inverse" size="lg" hint-size="260px,58px">Quero me inscrever</x-import></a>
+</sc-if>
+<sc-if value="{{ semForm }}" hint-placeholder-val="{{ false }}">
+<p style="font-family:var(--text-display);font-size:clamp(36px,4.6vw,60px);line-height:.88;text-transform:uppercase;letter-spacing:.08em">Inscrições em breve</p>
+<p style="font-size:17px;line-height:1.5;max-width:40ch">Valores e link de inscrição saem primeiro no nosso Instagram.</p>
+<a href="https://instagram.com/impro.sp" target="_blank" rel="noopener" style="text-decoration:none;align-self:flex-start"><x-import component-from-global-scope="IMPROSPDesignSystem_8fc605.Button" variant="inverse" size="lg" hint-size="260px,58px">Seguir @impro.sp</x-import></a>
+</sc-if>
+<div style="display:flex;align-items:center;gap:18px;background:#12100E;color:#D8D5CE;padding:18px;margin-top:8px">
+<img src="{{ c.logo }}" alt="{{ c.local }}" style="width:72px;height:72px;object-fit:contain;background:#D8D5CE;display:block;flex-shrink:0">
+<div style="display:flex;flex-direction:column;gap:4px;min-width:0">
+<span style="font-weight:700;font-size:16px">{{ c.local }}</span>
+<span style="font-size:14.5px;line-height:1.4">{{ c.endereco }}</span>
+<a href="{{ c.mapa }}" target="_blank" rel="noopener" style="font-weight:700;font-size:14px;color:#FF0000">ver no mapa →</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</sc-if>
+
+<section class="secao" data-screen-label="Cidade — Outras cidades" style="background:#12100E;color:#D8D5CE;padding:clamp(40px,5vw,64px) 0">
+<div class="pagina" style="display:flex;flex-direction:column;gap:20px">
+<span class="servico" style="font-size:13.5px;color:#FF0000">A turnê passa também por</span>
+<div style="display:flex;flex-wrap:wrap;gap:12px">
+<sc-for list="{{ outras }}" as="o" hint-placeholder-count="4">
+<a href="{{ o.href }}" style="text-decoration:none;color:#D8D5CE;border:3px solid #D8D5CE;padding:12px 16px;display:flex;flex-direction:column;gap:4px" style-hover="background:#FF0000;color:#12100E;border-color:#FF0000">
+<span style="font-family:var(--text-tag);font-size:28px;line-height:1">{{ o.nome }}</span>
+<span class="servico" style="font-size:12px">{{ o.datas }}</span>
+</a>
+</sc-for>
+</div>
+</div>
+</section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:&quot;100%&quot;,&quot;height&quot;:&quot;2400px&quot;},&quot;cidade&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;alto-paraiso&quot;,&quot;brasilia&quot;,&quot;curitiba&quot;,&quot;sao-paulo&quot;,&quot;florianopolis&quot;],&quot;default&quot;:&quot;curitiba&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const zap = 'https://wa.me/5511991149592?text=' + encodeURIComponent('Oi! Quero que o Território em Cena passe por Florianópolis.');
+    const maps = q => 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(q);
+    const OF = {
+      odisseia: { titulo: 'A Odisseia: a poesia épica como ferramenta transformadora', kicker: 'Mito e narrativa', quem: 'com Maro Lesiotti',
+        texto: 'A Odisseia de Homero é criatura mítica, intervenção divina e paisagem surreal. Na oficina, a estrutura, os temas e os recursos poéticos do poema viram ferramenta pra construir mundos amplos, encarnar personagens ampliados e levar a plateia a territórios não mapeados. Por fisicalidade, voz e dinâmica de grupo: contar histórias em escala mítica.' },
+      misterio: { titulo: 'Os segredos de um mistério de assassinato', kicker: 'Formato', quem: 'com Maro Lesiotti e Gabriel Caropreso',
+        texto: 'Um mergulho no improviso de mistério: criação de personagem, segredos e a arte delicada de mentir e acusar. A turma aprende a sustentar personagens complexos, jogar a culpa no outro e revelar verdades escondidas mantendo a plateia sem resposta. Vilão ou detetive: a oficina afia a escuta e o suspense de qualquer formato.',
+        mostra: 'Mostra · The Accused', mostraTexto: 'Formato imersivo de mistério e assassinato. Cada participante assume um personagem enredado no crime, com seu próprio segredo. Em quem você confia quando todo mundo tem algo a esconder?' },
+      tragedia: { titulo: 'Tragédia grega improvisada', kicker: 'Corpo e voz', quem: 'com Maro Lesiotti',
+        texto: 'Técnica do teatro grego antigo aplicada ao improviso. Por exercícios físicos e de voz, a turma busca meios de comunicar à plateia valores universais (a justiça, a opressão dos povos pelo poder), encarnar os personagens e se ligar à plateia em outra profundidade.' }
+    };
+    const of = (k, quando) => ({ ...OF[k], quando, mostra: OF[k].mostra || '', mostraTexto: OF[k].mostraTexto || '' });
+    const after = h => ({ hora: h, tipo: 'Resenha', titulo: 'After!', obs: 'Depois do espetáculo, a noite termina no bar, pra trocar ideias, conexões e improvisação.' });
+    const tapete = obs => ({ tipo: 'Espetáculo', titulo: 'O Tapete', obs });
+    const C = {
+      'alto-paraiso': { nome: 'Alto Paraíso', datas: '17—18.10', local: 'Teatro Escola A Barca Coração', localCurto: 'Teatro Escola A Barca Coração · Chapada dos Veadeiros, GO', endereco: 'Av. Paraíso, 293 — Alto Paraíso de Goiás, GO, 73770-000', logo: 'images/territorio/logo-abarca.jpg', foto: 'images/territorio/abarca-altoparaiso.jpg', fotoAlt: 'Teatro Escola A Barca Coração, em Alto Paraíso de Goiás', notaProg: 'chapada dos veadeiros',
+        dias: [
+          { data: '17.10', semana: 'Sábado', itens: [{ hora: '08h—16h', tipo: 'Oficina-montagem', titulo: 'A Odisseia', obs: 'Um dia inteiro de oficina que vira cena no dia seguinte.' }] },
+          { data: '18.10', semana: 'Domingo', itens: [{ hora: '19h', tipo: 'Espetáculo', titulo: 'Showcase — A Odisseia', obs: 'A turma da oficina no palco.' }, { hora: '20h', ...tapete('Criação de Luana Proença, com elenco local + Gabriel Caropreso, Renata Bittencourt e Maro Lesiotti.') }] }
+        ], oficinas: [of('odisseia', 'Sáb 17.10 · 08h—16h · oficina-montagem')], form: '',
+        servico: [{ k: 'Quando', v: '17 e 18 de outubro' }, { k: 'Onde', v: 'Teatro Escola A Barca Coração' }, { k: 'Idioma', v: 'Inglês, com interpretação simultânea para o português. Não precisa falar inglês.' }, { k: 'Valores', v: 'Em breve, no Instagram.' }] },
+      'brasilia': { nome: 'Brasília', datas: '19—21.10', local: 'Espaço Fábula', localCurto: 'Espaço Fábula · Venâncio Shopping, Asa Sul', endereco: 'Venâncio Shopping, BL B — SCS QD 08, entrada 60, sala 345 — Asa Sul, Brasília, DF, 70333-900', logo: 'images/territorio/logo-espacofabula.png', foto: 'images/territorio/brasilia.jpg', fotoAlt: 'Eixo Monumental, Brasília', notaProg: 'asa sul',
+        dias: [
+          { data: '19.10', semana: 'Segunda', itens: [{ hora: '19h—22h', tipo: 'Oficina · aula 1 de 2', titulo: 'Tragédia grega improvisada', obs: 'Workshop pago.' }] },
+          { data: '20.10', semana: 'Terça', itens: [{ hora: '20h', tipo: 'Espetáculo', titulo: 'Gênias', obs: 'Com Maro Lesiotti como convidada.' }] },
+          { data: '21.10', semana: 'Quarta', itens: [{ hora: '19h—23h', tipo: 'Oficina · aula 2 de 2', titulo: 'Tragédia grega improvisada', obs: 'Workshop pago.' }] }
+        ], oficinas: [of('tragedia', 'Seg 19.10 · 19h—22h + Qua 21.10 · 19h—23h')], form: '',
+        servico: [{ k: 'Quando', v: '19 a 21 de outubro' }, { k: 'Onde', v: 'Espaço Fábula, Venâncio Shopping' }, { k: 'Idioma', v: 'Inglês, com interpretação simultânea para o português. Não precisa falar inglês.' }, { k: 'Valores', v: 'Em breve, no Instagram.' }] },
+      'curitiba': { nome: 'Curitiba', datas: '30.10—01.11', local: 'Garalhufa — Escola de Atuação', localCurto: 'Garalhufa — Escola de Atuação · Centro', endereco: 'R. São Francisco, 308, 2º andar — Curitiba, PR', logo: 'images/territorio/logo-garalhufa.jpg', foto: 'images/territorio/curitiba.jpg', fotoAlt: 'Curitiba', notaProg: 'três dias de cena',
+        dias: [
+          { data: '30.10', semana: 'Sexta', itens: [{ hora: '20h', ...tapete('Com elenco misto da comunidade de improviso de Curitiba.') }, { hora: '21h', tipo: 'Espetáculo', titulo: 'Vivenda', obs: 'Dupla Face, de Curitiba, com participação especial de Gabriel Caropreso.' }, after('22h')] },
+          { data: '31.10', semana: 'Sábado', itens: [{ hora: '10h—13h', tipo: 'Oficina · aula 1 de 2', titulo: 'Os segredos de um mistério de assassinato', obs: 'Com Maro Lesiotti e Gabriel Caropreso.' }, { hora: '15h—18h', tipo: 'Oficina · aula 1 de 2', titulo: 'A Odisseia', obs: 'Com Maro Lesiotti.' }, { hora: '20h', tipo: 'Espetáculo', titulo: 'Aguardo Ansiosamente', obs: 'Elenco misto da cena local + Gabriel Caropreso. Direção de Gabriel Caropreso e Maro Lesiotti.' }, after('22h')] },
+          { data: '01.11', semana: 'Domingo', itens: [{ hora: '10h—13h', tipo: 'Oficina · aula 2 de 2', titulo: 'Os segredos de um mistério de assassinato', obs: '' }, { hora: '15h—18h', tipo: 'Oficina · aula 2 de 2', titulo: 'A Odisseia', obs: '' }, { hora: '20h', tipo: 'Mostra + jam', titulo: 'Mostra de processo + jam', obs: 'Abertura de processo das oficinas, com os formatos estudados, e jam de improvisação aberta.' }] }
+        ], oficinas: [of('misterio', 'Sáb 31.10 + Dom 01.11 · 10h—13h'), of('odisseia', 'Sáb 31.10 + Dom 01.11 · 15h—18h')],
+        form: 'https://docs.google.com/forms/d/e/1FAIpQLSeXGUro5xCe-_BpDqKkv_lqkT5ZKvB6bWSJeboHr4gDXlLXFw/viewform?usp=header',
+        servico: [{ k: 'Quando', v: '30 de outubro a 1º de novembro' }, { k: 'Onde', v: 'Garalhufa — Escola de Atuação' }, { k: 'Oficinas', v: 'R$ 250 cada · R$ 400 as duas' }, { k: 'Idioma', v: 'Inglês, com interpretação simultânea para o português. Não precisa falar inglês.' }] },
+      'sao-paulo': { nome: 'São Paulo', datas: '06—08.11', local: 'Kasulo Espaço de Arte', localCurto: 'Kasulo Espaço de Arte · Barra Funda (06.11 no Circo Caju)', endereco: 'Rua Sousa Lima, 300 — Barra Funda, São Paulo, SP, 01153-020', logo: 'images/logo/impro-sp-logo.png', foto: 'images/territorio/kasulo1.jpg', fotoAlt: 'Kasulo Espaço de Arte, Barra Funda', notaProg: 'barra funda',
+        dias: [
+          { data: '06.11', semana: 'Sexta', itens: [{ hora: '20h', tipo: 'Espetáculo · Circo Caju', titulo: 'Noite Estranha, Geral Sentiu', obs: 'Espetáculo do Grupo de Risco, com participação especial de Maro Lesiotti. Circo Caju: Rua Lavradio, 404, Barra Funda. Ingressos no Sympla.' }, after('22h')] },
+          { data: '07.11', semana: 'Sábado', itens: [{ hora: '10h—13h', tipo: 'Oficina · aula 1 de 2', titulo: 'Os segredos de um mistério de assassinato', obs: 'Com Maro Lesiotti e Gabriel Caropreso.' }, { hora: '15h—18h', tipo: 'Oficina · aula 1 de 2', titulo: 'A Odisseia', obs: 'Com Maro Lesiotti.' }, { hora: '19h', ...tapete('Criação de Luana Proença, com elenco local + Gabriel Caropreso e Maro Lesiotti.') }, { hora: '20h', tipo: 'Espetáculo', titulo: 'Aguardo Ansiosamente', obs: 'Elenco original de São Paulo. Direção de Maro Lesiotti e Gabriel Caropreso.' }, after('21h')] },
+          { data: '08.11', semana: 'Domingo', itens: [{ hora: '10h—13h', tipo: 'Oficina · aula 2 de 2', titulo: 'Os segredos de um mistério de assassinato', obs: '' }, { hora: '15h—18h', tipo: 'Oficina · aula 2 de 2', titulo: 'A Odisseia', obs: '' }, { hora: '19h', tipo: 'Mostra + jam', titulo: 'Mostra de processo + jam', obs: 'Abertura de processo das oficinas, com os formatos estudados, e jam de improvisação aberta.' }] }
+        ], oficinas: [of('misterio', 'Sáb 07.11 + Dom 08.11 · 10h—13h'), of('odisseia', 'Sáb 07.11 + Dom 08.11 · 15h—18h')],
+        form: 'https://docs.google.com/forms/d/e/1FAIpQLSeBwMhCsEz2h0VxFKGsxr0ERK7XVA8M5NnUcHuJAAnh5wsVeA/viewform?usp=header',
+        servico: [{ k: 'Quando', v: '6 a 8 de novembro' }, { k: 'Onde', v: 'Kasulo Espaço de Arte (06.11 no Circo Caju)' }, { k: 'Oficinas', v: 'R$ 269 cada · R$ 429 as duas' }, { k: 'Idioma', v: 'Inglês, com interpretação simultânea para o português. Não precisa falar inglês.' }] },
+      'florianopolis': { nome: 'Florianópolis', datas: '13—15.11', local: '', localCurto: 'Em breve', endereco: '', logo: '', foto: 'images/territorio/florianopolis.jpg', fotoAlt: 'Florianópolis vista do Morro da Cruz', notaProg: '', dias: [], oficinas: [], form: '', servico: [], breve: true }
+    };
+    const ordem = ['alto-paraiso', 'brasilia', 'curitiba', 'sao-paulo', 'florianopolis'];
+    const key = C[this.props.cidade] ? this.props.cidade : 'curitiba';
+    const c = { ...C[key], mapa: maps(C[key].endereco) };
+    return {
+      c, emBreve: !!c.breve, temProgramacao: !c.breve, temOficinas: c.oficinas.length > 0,
+      temForm: !!c.form, semForm: !c.breve && !c.form, waFloripa: zap,
+      outras: ordem.filter(k => k !== key).map(k => ({ nome: C[k].nome, datas: C[k].datas, href: 'territorio-' + k + '.dc.html' }))
+    };
+  }
+}
+</script>
+</body>
+</html>

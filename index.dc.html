@@ -66,55 +66,60 @@
 </section>
 
 <sc-if value="{{ emCartaz }}" hint-placeholder-val="{{ true }}">
-<section class="secao secao--cimento" data-screen-label="Home — Em cartaz">
+<section class="secao" data-screen-label="Home — Território em Cena" style="background:#12100E;color:#D8D5CE">
   <div class="pagina">
     <div class="cap">
       <span class="cap__num">02</span>
       <h2 class="cap__nome">Em cartaz</h2>
-      <span class="cap__nota">julho de 2026 · barra funda</span>
+      <span class="cap__nota" style="color:#D8D5CE">out—nov 2026 · 5 cidades</span>
     </div>
     <div class="grade g2" style="align-items:start;gap:clamp(32px,5vw,64px)">
-      <div style="position:relative;max-width:520px;justify-self:center">
-        <img src="images/flyer-figura.jpg" alt="Flyer da oficina-montagem FIGURA, com Gabriel Caropreso — Porão Cultural" style="width:100%;display:block;border:3px solid var(--tinta);box-shadow:6px 6px 0 rgba(0,0,0,.18);transform:rotate(-1deg)">
-        <div class="fita" style="width:110px;height:34px;top:-14px;left:-28px;transform:rotate(-8deg)"></div>
-        <div class="fita" style="width:110px;height:34px;top:-12px;right:-30px;left:auto;transform:rotate(6deg)"></div>
-      </div>
-      <div style="display:flex;flex-direction:column;gap:24px">
-        <span class="carimbo">Inscrições abertas</span>
-        <div>
-          <h3 style="font-family:var(--text-display);font-size:clamp(44px,6vw,80px);line-height:.85;text-transform:uppercase">Workshop Figura</h3>
-          <p class="servico" style="font-size:15px;margin-top:12px">Estímulos visuais para a improvisação · com Gabriel Caropreso</p>
-        </div>
-        <div class="prosa">
-          <p>A gente vai usar imagens — fotos, pinturas e quadrinhos — para construir cenas e criar imagens no palco. O formato vem do espetáculo <em>#sigodevolta</em> e já passou por Tessalônica, Barcelona e Colônia. É a primeira vez dele em São Paulo.</p>
-          <p>No último dia, o grupo vai pro palco fazer uma mostra aberta. O ponto de partida vão ser as fotos das redes sociais de quem estiver na plateia.</p>
-        </div>
-        <div class="cartao cartao--tinta" style="box-shadow:6px 6px 0 rgba(0,0,0,.18)">
-          <div style="display:flex;flex-direction:column;gap:11px">
-            <span style="font-size:15px"><strong class="servico" style="color:var(--vermelho);font-size:13.5px;margin-right:8px">Quando</strong> Sábados — 11, 18 e 25 de julho de 2026</span>
-            <span style="font-size:15px"><strong class="servico" style="color:var(--vermelho);font-size:13.5px;margin-right:8px">Horário</strong> Das 15h às 18h</span>
-            <span style="font-size:15px"><strong class="servico" style="color:var(--vermelho);font-size:13.5px;margin-right:8px">Onde</strong> Porão Cultural (anexo ao Porão da Cerveja) — Barra Funda, São Paulo/SP</span>
-            <span style="font-size:15px"><strong class="servico" style="color:var(--vermelho);font-size:13.5px;margin-right:8px">Preço</strong> R$ 180</span>
-            <span style="font-size:15px"><strong class="servico" style="color:var(--vermelho);font-size:13.5px;margin-right:8px">Lotação</strong> Turma de 20 alunos</span>
-            <span style="font-size:15px"><strong class="servico" style="color:var(--vermelho);font-size:13.5px;margin-right:8px">Inscrição</strong> WhatsApp +55 11 99114-9592</span>
-          </div>
-        </div>
+      <div style="display:flex;flex-direction:column;gap:22px">
+        <span class="servico" style="font-size:14px;color:#FF0000">Impro.SP apresenta</span>
+        <h3 style="font-family:var(--text-display);font-size:clamp(52px,8vw,112px);line-height:.85;text-transform:uppercase;letter-spacing:.08em">Território<br><span class="linha-vermelha">em cena</span></h3>
+        <span style="font-family:var(--text-tag);font-size:clamp(40px,5.5vw,72px);line-height:.9;color:#FF0000;transform:rotate(-4deg);transform-origin:left;display:inline-block;align-self:flex-start">Brasil</span>
+        <p style="font-size:clamp(17px,1.8vw,20px);line-height:1.5;max-width:46ch">Nossa turnê de lançamento: oficinas, espetáculos com elenco local e aberturas de processo em cinco cidades, com a improvisadora ateniense <strong>Maro Lesiotti</strong>.</p>
         <div style="display:flex;align-items:center;gap:18px;flex-wrap:wrap">
-          <a href="{{ waFigura }}" target="_blank" rel="noopener" style="text-decoration:none">
-            <x-import component-from-global-scope="IMPROSPDesignSystem_8fc605.Button" size="lg" hint-size="260px,58px">Quero me inscrever</x-import>
+          <a href="territorio-em-cena.dc.html" style="text-decoration:none">
+            <x-import component-from-global-scope="IMPROSPDesignSystem_8fc605.Button" size="lg" hint-size="260px,58px">Conhecer a turnê</x-import>
           </a>
-          <a href="cursos.dc.html" style="font-weight:700;font-size:15px;color:var(--tinta)" style-hover="color:var(--vermelho)">ver ementa completa →</a>
+          <span class="mao" style="font-size:21px;color:#D8D5CE;transform:rotate(-2deg)">inscrições abertas em curitiba e sp</span>
         </div>
+      </div>
+      <div style="display:flex;flex-direction:column">
+        <a href="territorio-alto-paraiso.dc.html" style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;border-top:4px solid #D8D5CE;padding:16px 4px;text-decoration:none;color:#D8D5CE" style-hover="color:#FF0000"><span style="font-family:var(--text-tag);font-size:clamp(28px,3vw,38px);line-height:1">Alto Paraíso</span><span style="font-family:var(--text-display);font-size:clamp(22px,2.4vw,30px);letter-spacing:.08em">17—18.10</span></a>
+        <a href="territorio-brasilia.dc.html" style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;border-top:4px solid #D8D5CE;padding:16px 4px;text-decoration:none;color:#D8D5CE" style-hover="color:#FF0000"><span style="font-family:var(--text-tag);font-size:clamp(28px,3vw,38px);line-height:1">Brasília</span><span style="font-family:var(--text-display);font-size:clamp(22px,2.4vw,30px);letter-spacing:.08em">19—21.10</span></a>
+        <a href="territorio-curitiba.dc.html" style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;border-top:4px solid #D8D5CE;padding:16px 4px;text-decoration:none;color:#D8D5CE" style-hover="color:#FF0000"><span style="font-family:var(--text-tag);font-size:clamp(28px,3vw,38px);line-height:1">Curitiba</span><span style="font-family:var(--text-display);font-size:clamp(22px,2.4vw,30px);letter-spacing:.08em">30.10—01.11</span></a>
+        <a href="territorio-sao-paulo.dc.html" style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;border-top:4px solid #D8D5CE;padding:16px 4px;text-decoration:none;color:#D8D5CE" style-hover="color:#FF0000"><span style="font-family:var(--text-tag);font-size:clamp(28px,3vw,38px);line-height:1">São Paulo</span><span style="font-family:var(--text-display);font-size:clamp(22px,2.4vw,30px);letter-spacing:.08em">06—08.11</span></a>
+        <a href="territorio-florianopolis.dc.html" style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;border-top:4px solid #D8D5CE;border-bottom:4px solid #D8D5CE;padding:16px 4px;text-decoration:none;color:#8C8A85" style-hover="color:#FF0000"><span style="font-family:var(--text-tag);font-size:clamp(28px,3vw,38px);line-height:1">Florianópolis</span><span style="font-family:var(--text-display);font-size:clamp(22px,2.4vw,30px);letter-spacing:.08em">em breve</span></a>
       </div>
     </div>
   </div>
 </section>
 </sc-if>
 
+<section class="secao" data-screen-label="Home — Já rolou" style="background:#3A3833;color:#D8D5CE;padding:clamp(40px,5vw,64px) 0">
+  <div class="pagina">
+    <div class="cap" style="margin-bottom:28px">
+      <span class="cap__num">03</span>
+      <h2 class="cap__nome">Já rolou</h2>
+      <span class="cap__nota" style="color:#D8D5CE">o que já passou pelo palco</span>
+    </div>
+    <div style="display:grid;grid-template-columns:minmax(0,160px) minmax(0,1fr);gap:clamp(18px,3vw,32px);align-items:center;max-width:760px">
+      <img src="images/flyer-figura.jpg" alt="Flyer do Workshop FIGURA, com Gabriel Caropreso" style="width:100%;display:block;border:3px solid #D8D5CE;filter:grayscale(1);transform:rotate(-2deg)">
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <span class="servico" style="font-size:12.5px;color:#FF0000">Julho de 2026 · Porão Cultural, Barra Funda</span>
+        <span style="font-family:var(--text-display);font-size:clamp(28px,3.4vw,42px);line-height:.9;text-transform:uppercase;letter-spacing:.08em">Workshop Figura</span>
+        <p style="font-size:15.5px;line-height:1.5">Estímulos visuais para a improvisação, com Gabriel Caropreso. Três sábados de imagens virando cena, fechando com mostra aberta a partir das fotos da plateia.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="secao secao--tinta" data-screen-label="Home — Ecossistema" style="padding-bottom:0">
   <div class="pagina">
     <div class="cap">
-      <span class="cap__num">03</span>
+      <span class="cap__num">04</span>
       <h2 class="cap__nome">O ecossistema</h2>
       <span class="cap__nota">o ensaio continua na calçada</span>
     </div>
@@ -140,7 +145,7 @@
 <section class="secao secao--cimento" data-screen-label="Home — Global Improvisers for Palestine">
   <div class="pagina">
     <div class="cap">
-      <span class="cap__num">04</span>
+      <span class="cap__num">05</span>
       <h2 class="cap__nome">Global Improvisers for Palestine</h2>
       <span class="cap__nota">grip · aliança internacional</span>
     </div>
@@ -165,8 +170,7 @@
 class Component extends DCLogic {
   renderVals() {
     const numero = (this.props.whatsapp ?? '5511991149592').replace(/\D/g, '');
-    const msg = 'Olá, quero me inscrever no Workshop FIGURA de julho.';
-    const palavras = ['escuta', 'risco', 'cena', 'presença', 'jam', 'dramaturgia instantânea', 'samba', 'ensaio', 'calçada', 'comunidade'];
+        const palavras = ['escuta', 'risco', 'cena', 'presença', 'jam', 'dramaturgia instantânea', 'samba', 'ensaio', 'calçada', 'comunidade'];
     const linha = palavras.join('  ✕  ') + '  ✕  ';
     const faixa = React.createElement(
       'div',
@@ -180,7 +184,6 @@ class Component extends DCLogic {
     );
     return {
       emCartaz: this.props.emCartaz ?? true,
-      waFigura: 'https://wa.me/' + numero + '?text=' + encodeURIComponent(msg),
       ticker: faixa,
     };
   }
