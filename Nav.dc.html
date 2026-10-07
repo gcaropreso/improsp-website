@@ -41,7 +41,8 @@ class Component extends DCLogic {
       { id: 'cursos', pt: ['Cursos e Programação', 'cursos.dc.html'], en: ['Courses & Program', 'cursos-en.dc.html'] },
       { id: 'quem',   pt: ['Quem Somos', 'quem-somos.dc.html'],       en: ['Who We Are', 'quem-somos-en.dc.html'] },
       { id: 'inter',  pt: ['Internacional', 'internacional.dc.html'], en: ['International', 'internacional-en.dc.html'] },
-      { id: 'territorio', pt: ['Território em Cena', 'territorio-em-cena.dc.html'], en: ['Território em Cena', 'territorio-em-cena.dc.html'] },
+      // As páginas da turnê só existem em português: o botão EN leva para a home em inglês, que apresenta a turnê.
+      { id: 'territorio', pt: ['Território em Cena', 'territorio-em-cena.dc.html'], en: ['Território em Cena', 'territorio-em-cena.dc.html'], enLang: 'index-en.dc.html' },
     ];
     const links = pages.map((p) => ({
       href: pt ? p.pt[1] : p.en[1],
@@ -52,7 +53,7 @@ class Component extends DCLogic {
     return {
       links,
       homeHref: pt ? 'index.dc.html' : 'index-en.dc.html',
-      langHref: pt ? current.en[1] : current.pt[1],
+      langHref: pt ? (current.enLang || current.en[1]) : current.pt[1],
       langLabel: pt ? 'EN' : 'PT',
     };
   }

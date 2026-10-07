@@ -1,8 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Prévia de link (WhatsApp, Instagram, busca): título, descrição e imagem lidos sem JavaScript.
+     Espelham o <helmet> desta página; se mudar lá, mude aqui também. -->
+<title>IMPRO.SP — Escola de improvisação teatral · São Paulo</title>
+<meta name="description" content="IMPRO.SP — escola contemporânea de improvisação teatral no centro de São Paulo. Teatro contemporâneo, composição ao vivo, risco.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="IMPRO.SP">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="IMPRO.SP — Escola de improvisação teatral · São Paulo">
+<meta property="og:description" content="IMPRO.SP — escola contemporânea de improvisação teatral no centro de São Paulo. Teatro contemporâneo, composição ao vivo, risco.">
+<meta property="og:image" content="https://www.improsp.com.br/images/marca/aplicacao-cartaz-01.jpg">
+<meta property="og:image:width" content="720">
+<meta property="og:image:height" content="720">
+<meta name="twitter:card" content="summary">
+<link rel="icon" type="image/png" href="images/logo/favicon.png">
 <script src="./support.js"></script>
 </head>
 <body>
@@ -58,8 +72,8 @@
         </div>
       </div>
       <div class="prosa">
-        <p>A IMPRO.SP é uma instituição cultural independente. Escola, coletivo artístico e laboratório de pesquisa. Formamos artistas, desenvolvemos linguagem cênica e criamos comunidade.</p>
-        <p>Aqui, improvisação significa <span class="linha-vermelha">dramaturgia instantânea</span>, escuta, presença e criação coletiva. Palco sem rede de proteção.</p>
+        <p>A IMPRO.SP é uma escola de improvisação teatral em São Paulo. Instituição cultural independente, é também coletivo artístico e laboratório de pesquisa.</p>
+        <p>A formação de seus artistas se apoia em fundamentação teórica e acontece na prática: escuta, presença e criação coletiva em tempo real, na construção de uma <span class="linha-vermelha">dramaturgia espontânea</span>. Palco sem rede de proteção.</p>
       </div>
     </div>
   </div>
@@ -170,7 +184,7 @@
 class Component extends DCLogic {
   renderVals() {
     const numero = (this.props.whatsapp ?? '5511991149592').replace(/\D/g, '');
-        const palavras = ['escuta', 'risco', 'cena', 'presença', 'jam', 'dramaturgia instantânea', 'samba', 'ensaio', 'calçada', 'comunidade'];
+        const palavras = ['escuta', 'risco', 'cena', 'presença', 'jam', 'dramaturgia espontânea', 'samba', 'ensaio', 'calçada', 'comunidade'];
     const linha = palavras.join('  ✕  ') + '  ✕  ';
     const faixa = React.createElement(
       'div',

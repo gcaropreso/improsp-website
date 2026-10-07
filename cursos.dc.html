@@ -1,15 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Prévia de link (WhatsApp, Instagram, busca): título, descrição e imagem lidos sem JavaScript.
+     Espelham o <helmet> desta página; se mudar lá, mude aqui também. -->
+<title>Cursos e Programação — IMPRO.SP</title>
+<meta name="description" content="Cursos, workshops e mostras abertas da IMPRO.SP — escola de improvisação teatral em São Paulo.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="IMPRO.SP">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Cursos e Programação — IMPRO.SP">
+<meta property="og:description" content="Cursos, workshops e mostras abertas da IMPRO.SP — escola de improvisação teatral em São Paulo.">
+<meta property="og:image" content="https://www.improsp.com.br/images/marca/aplicacao-cartaz-01.jpg">
+<meta property="og:image:width" content="720">
+<meta property="og:image:height" content="720">
+<meta name="twitter:card" content="summary">
+<link rel="icon" type="image/png" href="images/logo/favicon.png">
 <script src="./support.js"></script>
 </head>
 <body>
 <x-dc>
 <helmet>
   <title>Cursos e Programação — IMPRO.SP</title>
-  <meta name="description" content="Cursos, workshops e mostras abertas da IMPRO.SP — escola de improvisação teatral em São Paulo. Inscrições abertas: Workshop FIGURA.">
+  <meta name="description" content="Cursos, workshops e mostras abertas da IMPRO.SP — escola de improvisação teatral em São Paulo.">
   <link rel="stylesheet" href="_ds/impro-sp-design-system-8fc6055e-466b-4335-a237-85803bc66a28/tokens/fonts.css">
   <link rel="stylesheet" href="_ds/impro-sp-design-system-8fc6055e-466b-4335-a237-85803bc66a28/tokens/colors.css">
   <link rel="stylesheet" href="_ds/impro-sp-design-system-8fc6055e-466b-4335-a237-85803bc66a28/tokens/typography.css">
@@ -37,10 +51,56 @@
   </div>
 </header>
 
+<sc-if value="{{ inscricoesAbertas }}" hint-placeholder-val="{{ true }}">
+<section class="secao" data-screen-label="Cursos — Inscrições abertas">
+  <div class="pagina">
+    <div class="cap">
+      <span class="cap__num">01</span>
+      <h2 class="cap__nome">Inscrições abertas</h2>
+      <span class="cap__nota">turnê território em cena</span>
+    </div>
+    <p class="prosa" style="margin-bottom:clamp(32px,4vw,52px)">As oficinas da turnê <a href="territorio-em-cena.dc.html" style="font-weight:700;color:var(--tinta)" style-hover="color:var(--vermelho)">Território em Cena</a> são em inglês, com interpretação simultânea para o português. Não precisa falar inglês.</p>
+    <div class="grade g2" style="align-items:stretch;gap:clamp(28px,4vw,48px)">
+      <div class="cartao" style="display:flex;flex-direction:column;gap:20px;box-shadow:6px 6px 0 rgba(0,0,0,.18)">
+        <span class="carimbo" style="align-self:flex-start">Inscrições abertas</span>
+        <div>
+          <h3 style="font-family:var(--text-display);font-size:clamp(36px,4.5vw,56px);line-height:.85;text-transform:uppercase">Curitiba</h3>
+          <p class="servico" style="font-size:14px;margin-top:10px">31.10 e 01.11 · Garalhufa, Centro</p>
+        </div>
+        <div class="prosa" style="font-size:16px">
+          <p><strong>Os segredos de um mistério de assassinato</strong>, com Maro Lesiotti e Gabriel Caropreso.</p>
+          <p><strong>A Odisseia</strong>, com Maro Lesiotti.</p>
+          <p>Duas aulas cada, sábado e domingo. Dá pra fazer uma ou as duas.</p>
+        </div>
+        <a href="territorio-curitiba.dc.html" style="text-decoration:none;margin-top:auto;align-self:flex-start">
+          <x-import component-from-global-scope="IMPROSPDesignSystem_8fc605.Button" hint-size="260px,48px">Programação e inscrição</x-import>
+        </a>
+      </div>
+      <div class="cartao" style="display:flex;flex-direction:column;gap:20px;box-shadow:6px 6px 0 rgba(0,0,0,.18)">
+        <span class="carimbo" style="align-self:flex-start">Inscrições abertas</span>
+        <div>
+          <h3 style="font-family:var(--text-display);font-size:clamp(36px,4.5vw,56px);line-height:.85;text-transform:uppercase">São Paulo</h3>
+          <p class="servico" style="font-size:14px;margin-top:10px">07 e 08.11 · Kasulo Espaço de Arte, Barra Funda</p>
+        </div>
+        <div class="prosa" style="font-size:16px">
+          <p><strong>Os segredos de um mistério de assassinato</strong>, com Maro Lesiotti e Gabriel Caropreso.</p>
+          <p><strong>A Odisseia</strong>, com Maro Lesiotti.</p>
+          <p>Duas aulas cada, sábado e domingo. Dá pra fazer uma ou as duas.</p>
+        </div>
+        <a href="territorio-sao-paulo.dc.html" style="text-decoration:none;margin-top:auto;align-self:flex-start">
+          <x-import component-from-global-scope="IMPROSPDesignSystem_8fc605.Button" hint-size="260px,48px">Programação e inscrição</x-import>
+        </a>
+      </div>
+    </div>
+    <p style="font-size:15px;margin-top:clamp(24px,3vw,36px)">Alto Paraíso (17 e 18.10) e Brasília (19 a 21.10): inscrições em breve no Instagram <a href="https://instagram.com/impro.sp" target="_blank" rel="noopener" style="font-weight:700;color:var(--tinta)" style-hover="color:var(--vermelho)">@impro.sp</a>.</p>
+  </div>
+</section>
+</sc-if>
+
 <section class="secao secao--cimento" data-screen-label="Cursos — No lab / Em breve">
   <div class="pagina">
     <div class="cap">
-      <span class="cap__num">02</span>
+      <span class="cap__num">{{ numLab }}</span>
       <h2 class="cap__nome">No lab / Em breve</h2>
       <span class="cap__nota">a gente também tá descobrindo</span>
     </div>
@@ -64,7 +124,7 @@
         <span class="carimbo" style="align-self:flex-start">Aguardando espaço</span>
         <div>
           <h3 style="font-family:var(--text-display);font-size:clamp(36px,4.5vw,56px);line-height:.85;text-transform:uppercase">Masterclass Híbrida</h3>
-          <p class="servico" style="font-size:14px;margin-top:10px">Pesquisa de linguagem · Gabriel Caropreso, Maro Lesioti (Atenas) e Luana Proença (Brasília)</p>
+          <p class="servico" style="font-size:14px;margin-top:10px">Pesquisa de linguagem · Gabriel Caropreso, Maro Lesiotti (Atenas) e Luana Proença (Brasília)</p>
         </div>
         <div class="prosa" style="font-size:16px">
           <p>Curso com duração de três meses. Formato de trabalho compartilhado: a sala de ensaio é presencial em São Paulo, comandada por Gabriel, conectada em tempo real com as professoras-mestras online, com tradução em tempo real.</p>
@@ -81,7 +141,7 @@
 <section class="secao secao--tinta" data-screen-label="Cursos — Futuro">
   <div class="pagina">
     <div class="cap">
-      <span class="cap__num">03</span>
+      <span class="cap__num">{{ numFuturo }}</span>
       <h2 class="cap__nome">Futuro</h2>
       <span class="cap__nota">pesquisa contínua</span>
     </div>
@@ -92,7 +152,7 @@
       </div>
       <div class="prosa">
         <p>Nosso plano de formação mais extenso, com duração de 2 anos. Uma imersão profunda na técnica e no risco da composição ao vivo.</p>
-        <p>O currículo pedagógico e a coordenação artística são assinados conjuntamente por Gabriel Caropreso, Tamara Borges e Maro Lesioti. Um programa estruturado para formar elencos profissionais e consolidar núcleos de pesquisa contínua em São Paulo.</p>
+        <p>O currículo pedagógico e a coordenação artística são assinados conjuntamente por Gabriel Caropreso, Tamara Borges e Maro Lesiotti. Um programa estruturado para formar elencos profissionais e consolidar núcleos de pesquisa contínua em São Paulo.</p>
         <p class="mao" style="font-size:21px">em desenho. sem pressa, sem truque.</p>
       </div>
     </div>
@@ -101,16 +161,19 @@
 
 <dc-import name="Footer" lang="pt" hint-size="100%,320px"></dc-import>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;figuraAberto&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Programação&quot;},&quot;whatsapp&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;5511991149592&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Contato&quot;}}">
+<script type="text/x-dc" data-dc-script data-props="{&quot;inscricoesAbertas&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Programação&quot;},&quot;whatsapp&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;5511991149592&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Contato&quot;}}">
 class Component extends DCLogic {
   renderVals() {
     const numero = (this.props.whatsapp ?? '5511991149592').replace(/\D/g, '');
     const wa = (msg) => 'https://wa.me/' + numero + '?text=' + encodeURIComponent(msg);
-    const aberto = this.props.figuraAberto ?? true;
+    // Seção 01 (inscrições abertas). Quando não houver turma aberta, troque true por false na linha abaixo:
+    // a seção some e a numeração das outras se ajusta sozinha.
+    const INSCRICOES_ABERTAS = true;
+    const abertas = INSCRICOES_ABERTAS && (this.props.inscricoesAbertas ?? true);
     return {
-      figuraAberto: aberto,
-      figuraLotado: !aberto,
-      waFigura: wa('Olá, quero me inscrever no Workshop FIGURA de julho.'),
+      inscricoesAbertas: abertas,
+      numLab: abertas ? '02' : '01',
+      numFuturo: abertas ? '03' : '02',
       waSonora: wa('Olá, quero ser avisade quando abrir turma do Workshop SONORA.'),
       waMasterclass: wa('Olá, quero ser avisade quando abrir turma da Masterclass Híbrida.'),
     };

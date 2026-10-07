@@ -1,8 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Prévia de link (WhatsApp, Instagram, busca): título, descrição e imagem lidos sem JavaScript.
+     Espelham o <helmet> desta página; se mudar lá, mude aqui também. -->
+<title>IMPRO.SP — School of theatrical improvisation · São Paulo</title>
+<meta name="description" content="IMPRO.SP — contemporary school of theatrical improvisation in downtown São Paulo, Brazil. Contemporary theater, live composition, risk.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="IMPRO.SP">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="IMPRO.SP — School of theatrical improvisation · São Paulo">
+<meta property="og:description" content="IMPRO.SP — contemporary school of theatrical improvisation in downtown São Paulo, Brazil. Contemporary theater, live composition, risk.">
+<meta property="og:image" content="https://www.improsp.com.br/images/marca/aplicacao-cartaz-01.jpg">
+<meta property="og:image:width" content="720">
+<meta property="og:image:height" content="720">
+<meta name="twitter:card" content="summary">
+<link rel="icon" type="image/png" href="images/logo/favicon.png">
 <script src="./support.js"></script>
 </head>
 <body>
@@ -58,63 +72,68 @@
         </div>
       </div>
       <div class="prosa">
-        <p>IMPRO.SP is an independent cultural institution. A school, an artistic collective and a research laboratory. We train artists, develop stage language and build community.</p>
-        <p>Here, improvisation means <span class="linha-vermelha">instant dramaturgy</span>, listening, presence and collective creation. A stage with no safety net.</p>
+        <p>IMPRO.SP is a school of theatrical improvisation in São Paulo, Brazil. An independent cultural institution, it is also an artistic collective and a research laboratory.</p>
+        <p>Its artists' training rests on theoretical grounding and happens in practice: listening, presence and real-time collective creation, building a <span class="linha-vermelha">spontaneous dramaturgy</span>. A stage with no safety net.</p>
       </div>
     </div>
   </div>
 </section>
 
 <sc-if value="{{ emCartaz }}" hint-placeholder-val="{{ true }}">
-<section class="secao secao--cimento" data-screen-label="Home EN — Now playing">
+<section class="secao" data-screen-label="Home EN — Território em Cena" style="background:#12100E;color:#D8D5CE">
   <div class="pagina">
     <div class="cap">
       <span class="cap__num">02</span>
       <h2 class="cap__nome">Now playing</h2>
-      <span class="cap__nota">july 2026 · barra funda</span>
+      <span class="cap__nota" style="color:#D8D5CE">oct—nov 2026 · 5 cities</span>
     </div>
     <div class="grade g2" style="align-items:start;gap:clamp(32px,5vw,64px)">
-      <div style="position:relative;max-width:520px;justify-self:center">
-        <img src="images/flyer-figura.jpg" alt="Flyer for the FIGURA workshop with Gabriel Caropreso — Porão Cultural" style="width:100%;display:block;border:3px solid var(--tinta);box-shadow:6px 6px 0 rgba(0,0,0,.18);transform:rotate(-1deg)">
-        <div class="fita" style="width:110px;height:34px;top:-14px;left:-28px;transform:rotate(-8deg)"></div>
-        <div class="fita" style="width:110px;height:34px;top:-12px;right:-30px;left:auto;transform:rotate(6deg)"></div>
-      </div>
-      <div style="display:flex;flex-direction:column;gap:24px">
-        <span class="carimbo">Enrollment open</span>
-        <div>
-          <h3 style="font-family:var(--text-display);font-size:clamp(44px,6vw,80px);line-height:.85;text-transform:uppercase">Figura Workshop</h3>
-          <p class="servico" style="font-size:15px;margin-top:12px">Visual stimuli for improvisation · with Gabriel Caropreso</p>
-        </div>
-        <div class="prosa">
-          <p>We use images — photos, paintings and comics — to build scenes and create stage imagery. The format comes from the show <em>#sigodevolta</em> and has been to Thessaloniki, Barcelona and Cologne. This is its first time in São Paulo.</p>
-          <p>On the last day, the group takes the stage for an open showcase. The starting point: photos from the social media of whoever is in the audience.</p>
-        </div>
-        <div class="cartao cartao--tinta" style="box-shadow:6px 6px 0 rgba(0,0,0,.18)">
-          <div style="display:flex;flex-direction:column;gap:11px">
-            <span style="font-size:15px"><strong class="servico" style="color:var(--vermelho);font-size:13.5px;margin-right:8px">When</strong> Saturdays — July 11, 18 &amp; 25, 2026</span>
-            <span style="font-size:15px"><strong class="servico" style="color:var(--vermelho);font-size:13.5px;margin-right:8px">Time</strong> 3pm to 6pm</span>
-            <span style="font-size:15px"><strong class="servico" style="color:var(--vermelho);font-size:13.5px;margin-right:8px">Where</strong> Porão Cultural (annex to Porão da Cerveja) — Barra Funda, São Paulo, Brazil</span>
-            <span style="font-size:15px"><strong class="servico" style="color:var(--vermelho);font-size:13.5px;margin-right:8px">Price</strong> R$ 180</span>
-            <span style="font-size:15px"><strong class="servico" style="color:var(--vermelho);font-size:13.5px;margin-right:8px">Capacity</strong> Group of 20 students</span>
-            <span style="font-size:15px"><strong class="servico" style="color:var(--vermelho);font-size:13.5px;margin-right:8px">Sign up</strong> WhatsApp +55 11 99114-9592</span>
-          </div>
-        </div>
+      <div style="display:flex;flex-direction:column;gap:22px">
+        <span class="servico" style="font-size:14px;color:#FF0000">Impro.SP presents</span>
+        <h3 style="font-family:var(--text-display);font-size:clamp(52px,8vw,112px);line-height:.85;text-transform:uppercase;letter-spacing:.08em">Território<br><span class="linha-vermelha">em cena</span></h3>
+        <span style="font-family:var(--text-tag);font-size:clamp(40px,5.5vw,72px);line-height:.9;color:#FF0000;transform:rotate(-4deg);transform-origin:left;display:inline-block;align-self:flex-start">Brazil</span>
+        <p style="font-size:clamp(17px,1.8vw,20px);line-height:1.5;max-width:46ch">Our launch tour: workshops, shows with local casts and work-in-progress showings in five cities, with Athenian improviser <strong>Maro Lesiotti</strong>. Workshops are taught in English, with live interpretation into Portuguese. The tour pages are in Portuguese.</p>
         <div style="display:flex;align-items:center;gap:18px;flex-wrap:wrap">
-          <a href="{{ waFigura }}" target="_blank" rel="noopener" style="text-decoration:none">
-            <x-import component-from-global-scope="IMPROSPDesignSystem_8fc605.Button" size="lg" hint-size="260px,58px">Sign me up</x-import>
+          <a href="territorio-em-cena.dc.html" style="text-decoration:none">
+            <x-import component-from-global-scope="IMPROSPDesignSystem_8fc605.Button" size="lg" hint-size="260px,58px">See the tour</x-import>
           </a>
-          <a href="cursos-en.dc.html" style="font-weight:700;font-size:15px;color:var(--tinta)" style-hover="color:var(--vermelho)">full program →</a>
+          <span class="mao" style="font-size:21px;color:#D8D5CE;transform:rotate(-2deg)">enrollment open in curitiba and são paulo</span>
         </div>
+      </div>
+      <div style="display:flex;flex-direction:column">
+        <a href="territorio-alto-paraiso.dc.html" style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;border-top:4px solid #D8D5CE;padding:16px 4px;text-decoration:none;color:#D8D5CE" style-hover="color:#FF0000"><span style="font-family:var(--text-tag);font-size:clamp(28px,3vw,38px);line-height:1">Alto Paraíso</span><span style="font-family:var(--text-display);font-size:clamp(22px,2.4vw,30px);letter-spacing:.08em">17—18.10</span></a>
+        <a href="territorio-brasilia.dc.html" style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;border-top:4px solid #D8D5CE;padding:16px 4px;text-decoration:none;color:#D8D5CE" style-hover="color:#FF0000"><span style="font-family:var(--text-tag);font-size:clamp(28px,3vw,38px);line-height:1">Brasília</span><span style="font-family:var(--text-display);font-size:clamp(22px,2.4vw,30px);letter-spacing:.08em">19—21.10</span></a>
+        <a href="territorio-curitiba.dc.html" style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;border-top:4px solid #D8D5CE;padding:16px 4px;text-decoration:none;color:#D8D5CE" style-hover="color:#FF0000"><span style="font-family:var(--text-tag);font-size:clamp(28px,3vw,38px);line-height:1">Curitiba</span><span style="font-family:var(--text-display);font-size:clamp(22px,2.4vw,30px);letter-spacing:.08em">30.10—01.11</span></a>
+        <a href="territorio-sao-paulo.dc.html" style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;border-top:4px solid #D8D5CE;padding:16px 4px;text-decoration:none;color:#D8D5CE" style-hover="color:#FF0000"><span style="font-family:var(--text-tag);font-size:clamp(28px,3vw,38px);line-height:1">São Paulo</span><span style="font-family:var(--text-display);font-size:clamp(22px,2.4vw,30px);letter-spacing:.08em">06—08.11</span></a>
+        <a href="territorio-florianopolis.dc.html" style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;border-top:4px solid #D8D5CE;border-bottom:4px solid #D8D5CE;padding:16px 4px;text-decoration:none;color:#8C8A85" style-hover="color:#FF0000"><span style="font-family:var(--text-tag);font-size:clamp(28px,3vw,38px);line-height:1">Florianópolis</span><span style="font-family:var(--text-display);font-size:clamp(22px,2.4vw,30px);letter-spacing:.08em">coming soon</span></a>
       </div>
     </div>
   </div>
 </section>
 </sc-if>
 
+<section class="secao" data-screen-label="Home EN — Previously" style="background:#3A3833;color:#D8D5CE;padding:clamp(40px,5vw,64px) 0">
+  <div class="pagina">
+    <div class="cap" style="margin-bottom:28px">
+      <span class="cap__num">03</span>
+      <h2 class="cap__nome">Previously</h2>
+      <span class="cap__nota" style="color:#D8D5CE">what has already crossed our stage</span>
+    </div>
+    <div style="display:grid;grid-template-columns:minmax(0,160px) minmax(0,1fr);gap:clamp(18px,3vw,32px);align-items:center;max-width:760px">
+      <img src="images/flyer-figura.jpg" alt="Flyer for the FIGURA workshop, with Gabriel Caropreso" style="width:100%;display:block;border:3px solid #D8D5CE;filter:grayscale(1);transform:rotate(-2deg)">
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <span class="servico" style="font-size:12.5px;color:#FF0000">July 2026 · Porão Cultural, Barra Funda</span>
+        <span style="font-family:var(--text-display);font-size:clamp(28px,3.4vw,42px);line-height:.9;text-transform:uppercase;letter-spacing:.08em">Figura Workshop</span>
+        <p style="font-size:15.5px;line-height:1.5">Visual stimuli for improvisation, with Gabriel Caropreso. Three Saturdays of images turning into scenes, closing with an open showcase built from the audience's photos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="secao secao--tinta" data-screen-label="Home EN — Ecosystem" style="padding-bottom:0">
   <div class="pagina">
     <div class="cap">
-      <span class="cap__num">03</span>
+      <span class="cap__num">04</span>
       <h2 class="cap__nome">The ecosystem</h2>
       <span class="cap__nota">rehearsal continues on the sidewalk</span>
     </div>
@@ -140,7 +159,7 @@
 <section class="secao secao--cimento" data-screen-label="Home EN — Global Improvisers for Palestine">
   <div class="pagina">
     <div class="cap">
-      <span class="cap__num">04</span>
+      <span class="cap__num">05</span>
       <h2 class="cap__nome">Global Improvisers for Palestine</h2>
       <span class="cap__nota">grip · international alliance</span>
     </div>
@@ -164,9 +183,7 @@
 <script type="text/x-dc" data-dc-script data-props="{&quot;emCartaz&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Program&quot;},&quot;whatsapp&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;5511991149592&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Contact&quot;}}">
 class Component extends DCLogic {
   renderVals() {
-    const numero = (this.props.whatsapp ?? '5511991149592').replace(/\D/g, '');
-    const msg = 'Hello! I would like to sign up for the FIGURA workshop in July.';
-    const words = ['listening', 'risk', 'scene', 'presence', 'jam', 'instant dramaturgy', 'samba', 'rehearsal', 'sidewalk', 'community'];
+    const words = ['listening', 'risk', 'scene', 'presence', 'jam', 'spontaneous dramaturgy', 'samba', 'rehearsal', 'sidewalk', 'community'];
     const line = words.join('  ✕  ') + '  ✕  ';
     const strip = React.createElement(
       'div',
@@ -180,7 +197,6 @@ class Component extends DCLogic {
     );
     return {
       emCartaz: this.props.emCartaz ?? true,
-      waFigura: 'https://wa.me/' + numero + '?text=' + encodeURIComponent(msg),
       ticker: strip,
     };
   }
